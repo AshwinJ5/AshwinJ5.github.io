@@ -1,0 +1,3 @@
+:HL["/AshwinJ5.github.io/_next/static/chunks/5c039324cc42450c.css","style"]
+:HL["/AshwinJ5.github.io/_next/static/chunks/faf80d196d23ee68.css","style"]
+0:{"buildId":"Nj8cHJlgUoihlbKGrM-hY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

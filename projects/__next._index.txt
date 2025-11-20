@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[39756,["/AshwinJ5.github.io/_next/static/chunks/ff1a16fafef87110.js","/AshwinJ5.github.io/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+3:I[37457,["/AshwinJ5.github.io/_next/static/chunks/ff1a16fafef87110.js","/AshwinJ5.github.io/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+4:I[29306,["/AshwinJ5.github.io/_next/static/chunks/eda85721f1b5a513.js"],"default"]
+:HL["/AshwinJ5.github.io/_next/static/chunks/5c039324cc42450c.css","style"]
+:HL["/AshwinJ5.github.io/_next/static/chunks/faf80d196d23ee68.css","style"]
+0:{"buildId":"Nj8cHJlgUoihlbKGrM-hY","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/AshwinJ5.github.io/_next/static/chunks/5c039324cc42450c.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable space_grotesk_3fc8433f-module__clatVG__variable antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","$L4",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/AshwinJ5.github.io/_next/static/chunks/faf80d196d23ee68.css","precedence":"next"}]]]}]}]}]]}],"loading":null,"isPartial":false}
