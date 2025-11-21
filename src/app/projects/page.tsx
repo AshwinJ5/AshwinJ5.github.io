@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { projects } from "../datas"; // Fixed import, personalData wasn't used
+import { projects, personalData } from "../datas";
 import Link from "next/link";
 
 // Initialize font
@@ -209,7 +209,7 @@ export default function Projects() {
                                     applications. Check out my GitHub profile for a complete list.
                                 </p>
                                 <Link
-                                    href="https://github.com/" // Replace with your github
+                                    href={`${personalData?.socialMedia?.github}?tab=repositories` || "#"}
                                     target="_blank"
                                     className="mt-4 flex h-12 items-center justify-center rounded-lg bg-[#ff0000] px-8 text-base font-bold text-white shadow-lg shadow-[#ff0000]/20 transition-all hover:bg-red-700 hover:shadow-xl hover:-translate-y-0.5"
                                 >
