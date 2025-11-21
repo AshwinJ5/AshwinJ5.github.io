@@ -4,49 +4,13 @@ import { Inter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { experiences, skills, education } from "../datas";
 
 // Initialize Font
 const inter = Inter({
     subsets: ["latin"],
     variable: "--font-inter",
 });
-
-// Data for Skills
-const skills = [
-    "MongoDB",
-    "Express.js",
-    "React",
-    "Node.js",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "Shadcn UI",
-];
-
-// Data for Experience
-const experiences = [
-    {
-        title: "Senior MERN Stack Developer",
-        company: "Innovatech Solutions | Jan 2021 - Present",
-        points: [
-            "Led the development of a scalable e-commerce platform using Next.js and a Node.js backend, improving performance by 30%.",
-            "Architected and implemented a new RESTful API service with Express.js and MongoDB, handling over 1 million daily requests.",
-            "Mentored junior developers and conducted code reviews to maintain high-quality code standards.",
-        ],
-    },
-    {
-        title: "Full Stack Developer",
-        company: "CodeCrafters Inc. | Jun 2018 - Dec 2020",
-        points: [
-            "Developed and maintained client-facing web applications using the MERN stack.",
-            "Collaborated with designers to create responsive and accessible user interfaces with React and CSS-in-JS.",
-            "Integrated third-party APIs for payment processing and data analytics.",
-        ],
-    },
-];
 
 export default function AboutMe() {
     return (
@@ -88,11 +52,14 @@ export default function AboutMe() {
                                         and turning ideas into reality with clean and efficient code.
                                     </p>
                                     <div className="mt-2 flex justify-center gap-4 md:justify-start">
-                                        <Link href={'/projects'} className="flex h-10 items-center justify-center rounded-lg bg-[#ff0000] px-5 text-sm font-bold leading-normal tracking-wide text-white hover:bg-white hover:text-[#ff0000] transition-colors shadow-lg shadow-[#ff0000]/20">
+                                        <Link
+                                            href={"/projects"}
+                                            className="flex h-10 items-center justify-center rounded-lg bg-[#ff0000] px-5 text-sm font-bold leading-normal tracking-wide text-white hover:bg-white hover:text-[#ff0000] transition-colors shadow-lg shadow-[#ff0000]/20"
+                                        >
                                             <span className="truncate">View My Projects</span>
                                         </Link>
                                         <button className="flex h-10 items-center justify-center rounded-lg border border-slate-700 bg-transparent px-5 text-sm font-bold leading-normal tracking-wide text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer">
-                                            <span className="truncate">Download CV</span>
+                                            <span className="truncate">Download Resume</span>
                                         </button>
                                     </div>
                                 </div>
@@ -103,13 +70,15 @@ export default function AboutMe() {
                                 <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-50">
                                     Core <span className="text-[#ff0000]">Competencies</span>
                                 </h2>
-                                <div className="flex flex-wrap gap-3">
-                                    {skills.map((skill) => (
+                                <div className="flex flex-wrap gap-3 justify-start ">
+                                    {skills.map((skill, index) => (
                                         <div
-                                            key={skill}
+                                            key={index}
                                             className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg border border-slate-800 bg-slate-900 px-4 transition-colors hover:border-[#ff0000] cursor-default"
                                         >
-                                            <p className="text-sm font-medium text-slate-300">{skill}</p>
+                                            <p className="text-sm font-medium text-slate-300">
+                                                {skill?.name?.toLocaleUpperCase()}
+                                            </p>
                                         </div>
                                     ))}
                                 </div>
@@ -149,25 +118,23 @@ export default function AboutMe() {
                             </section>
 
                             {/* Education */}
-                            <section className="pb-16">
+                            <section className="pb-16 flex flex-col gap-5">
                                 <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-50">
                                     <span className="text-[#ff0000]">Education</span>
                                 </h2>
-                                <div className="flex items-start gap-6 group">
-                                    <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-[#ff0000] bg-black shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
-                                        <span className="material-symbols-outlined text-[#ff0000] text-lg">school</span>
+                                {education.map((item, index) => (
+                                    <div key={index} className="flex items-start gap-6 group">
+                                        <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-[#ff0000] bg-black shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
+                                            <span className="material-symbols-outlined text-[#ff0000] text-lg">{item.label}</span>
+                                        </div>
+
+                                        <div>
+                                            <h3 className="text-lg font-bold text-slate-50">{item.title}</h3>
+                                            <p className="text-sm text-slate-400">{item.institution}</p>
+                                            <p className="mt-2 text-slate-400">{item.description}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-slate-50">
-                                            Bachelor of Science in Computer Science
-                                        </h3>
-                                        <p className="text-sm text-slate-400">State University | Graduated May 2018</p>
-                                        <p className="mt-2 text-slate-400">
-                                            Focused on software engineering principles, database management, and web
-                                            development technologies.
-                                        </p>
-                                    </div>
-                                </div>
+                                ))}
                             </section>
                         </main>
                     </div>

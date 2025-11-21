@@ -23,7 +23,7 @@
         { "name": "Material UI", "image_url": "/material.svg" },
         { "name": "Git", "image_url": "/git.svg" },
         { "name": "Github", "image_url": "/github.svg" },
-        { "name": "Supabase", "image_url": "/supabase.svg" },
         { "name": "Firebase", "image_url": "/firebase.svg" },
+        { "name": "Supabase", "image_url": "/supabase.svg" },
         { "name": "Angular", "image_url": "/angular.svg" }
     ]

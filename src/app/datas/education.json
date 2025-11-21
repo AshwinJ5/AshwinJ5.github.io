@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Bachelor of Technology in Mechanical Engineering",
+    "institution": "KTU | Kottayam Institute of Technology and Science",
+    "description": "Built strong analytical and problem-solving skills with an early shift into software development and database technologies.",
+    "label":"engineering"
+  },
+  {
+    "title": "Higher Secondary Education (Science)",
+    "institution": "Holy Family HSS, Muttambalam",
+    "description": "Built a solid foundation in structured learning and academic responsibility during higher secondary education.",
+    "label":"school"
+
+  },
+  {
+    "title": "SSLC",
+    "institution": "Holy Cross School, Aymanam",
+    "description": "Completed foundational education with emphasis on discipline, academics, and personal development.",
+    "label":"menu_book"
+  }
+]

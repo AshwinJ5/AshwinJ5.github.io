@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Full Stack Developer (MERN Stack)",
+        "company": "Supportta Solutions Pvt Ltd, Kottayam | March 2024 - Present",
+        "points": [
+        "Built high-performance web applications using Next.js and Node.js, improving load speed and scalability.",
+        "Designed and implemented RESTful APIs with Express.js and MongoDB for business-critical operations.",
+        "Collaborated on system architecture and mentored team members to maintain quality and efficiency."
+        ]
+    },
+    {
+        "title": "MERN Stack Developer Intern",
+        "company": "TrackPi Pivate Ltd, Kakkanad | Dec 2023 - March 2024",
+        "points": [
+        "Developed responsive web interfaces using React and optimized user interaction.",
+        "Integrated real-time APIs and improved feature reliability and usability.",
+        "Assisted in deploying applications and resolving UI/UX issues during development."
+        ]
+    },
+    {
+        "title": "MERN Stack Developer Trainee",
+        "company": "Luminar Technolab, Kakkanad | Dec 2022 - July 2023",
+        "points": [
+        "Learned and applied MERN Stack fundamentals through hands-on project development.",
+        "Built reusable UI components and practiced clean code standards.",
+        "Collaborated on mini-projects and improved debugging and problem-solving skills."
+        ]
+    }
+]
