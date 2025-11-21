@@ -6,8 +6,19 @@ import Footer from "./Footer";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { personalData, skills, projects } from "../datas";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
+
+    const stagger = {
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.15 } },
+    };
+
     const skillCards = [
         {
             icon: "lan",
@@ -19,7 +30,7 @@ const LandingPage = () => {
             icon: "database",
             title: "Backend Development",
             description:
-            "Building robust server-side applications and APIs with Node.js, Express, and ensuring secure data handling.",
+                "Building robust server-side applications and APIs with Node.js, Express, and ensuring secure data handling.",
         },
         {
             icon: "code",
@@ -46,7 +57,13 @@ const LandingPage = () => {
                 {/* Navbar */}
 
                 {/* Hero Section */}
-                <section className="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden py-16 lg:py-24">
+                <motion.section
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeUp}
+                    className="relative flex min-h-[calc(100vh-80px)] items-center justify-center py-16 lg:py-24 overflow-hidden"
+                >
+                    {" "}
                     {/* Particles Background */}
                     <div className="absolute inset-0 z-0 w-full h-full ">
                         <Particles
@@ -61,90 +78,61 @@ const LandingPage = () => {
                             className="w-full h-full"
                         />
                     </div>
-
                     {/* Main Content */}
-                    <div className="container relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8 pointer-events-none">
-                        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-                            <h1 className="mb-6 text-4xl font-black uppercase leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+                    <div className="relative z-10 container grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2 pointer-events-none">
+                        <motion.div variants={stagger} className="text-center lg:text-left">
+                            <motion.h1
+                                variants={fadeUp}
+                                className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight"
+                            >
                                 MERN STACK <br />
                                 <span className="text-[#ff0000]">DEVELOPER</span>
-                            </h1>
+                            </motion.h1>
 
-                            <p className="mb-8 max-w-xl text-base font-light leading-relaxed text-zinc-400 sm:text-lg md:text-xl">
+                            <motion.p variants={fadeUp} className="mt-6 max-w-xl text-zinc-400 sm:text-lg">
                                 {
-                                    "Hello, I'm Ashwin Joseph — a developer focused on crafting scalable and high-performance web applications. I turn complex problems into elegant, user-friendly solutions."
+                                    "Hello, I'm Ashwin Joseph — a developer focused on crafting scalable and high-performance web applications."
                                 }
-                            </p>
+                            </motion.p>
 
-                            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center pointer-events-auto">
-                                <Link
-                                    className="group flex h-14 w-full items-center justify-center gap-2 rounded-full bg-[#ff0000] px-8 text-base font-bold text-white transition-all hover:bg-white hover:text-[#ff0000] sm:w-auto"
-                                    href="/projects"
-                                >
-                                    <span>Explore Projects</span>
-                                    <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
-                                        <svg
-                                            className="w-10 h-10  "
-                                            aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2.1"
-                                                d="M19 12H5m14 0-4 4m4-4-4-4"
-                                            />
-                                        </svg>
-                                    </span>
-                                </Link>
-
-                                {/* Social Icons */}
-                                <div className="flex items-center justify-center gap-4 sm:justify-start">
+                            <motion.div variants={fadeUp} className="mt-8 flex gap-4 pointer-events-auto">
+                                <div>
+                                    <Link
+                                        href="/projects"
+                                        className="flex h-14 items-center justify-center rounded-full bg-[#ff0000] px-8 font-bold hover:bg-white hover:text-[#ff0000]"
+                                    >
+                                        Explore Projects
+                                    </Link>
+                                </div>
+                                <div className="flex gap-4">
                                     {[
-                                        {
-                                            path: "M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.491.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z",
-                                            label: "Github",
-                                            url: personalData?.socialMedia?.github || "#",
-                                        },
-                                        {
-                                            path: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z",
-                                            label: "LinkedIn",
-                                            url: personalData?.socialMedia?.linkedin || "#",
-                                        },
-                                        {
-                                            path: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z",
-                                            label: "Mail",
-                                            url: `mailto:${personalData?.email}` || "#",
-                                        },
-                                    ].map((icon, idx) => (
-                                        <Link
-                                            key={idx}
-                                            className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 transition-all hover:border-[#ff0000] hover:bg-[#ff0000] hover:text-white"
-                                            href={icon.url}
-                                            target="_blank"
-                                            aria-label={icon.label}
-                                        >
-                                            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d={icon.path} clipRule="evenodd" fillRule="evenodd" />
-                                            </svg>
-                                        </Link>
+                                        personalData?.socialMedia?.github,
+                                        personalData?.socialMedia?.linkedin,
+                                        `mailto:${personalData?.email}`,
+                                    ].map((link, i) => (
+                                        <motion.div key={i}>
+                                            <Link
+                                                href={link}
+                                                target="_blank"
+                                                className="flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 bg-zinc-900 hover:bg-[#ff0000] hover:text-white"
+                                            >
+                                                <span className="material-symbols-outlined">
+                                                    {i === 0 ? "code" : i === 1 ? "groups" : "mail"}
+                                                </span>
+                                            </Link>
+                                        </motion.div>
                                     ))}
                                 </div>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
-                </section>
+                </motion.section>
 
                 {/* About Section */}
                 <section className="relative w-full py-16 sm:py-20 lg:py-32" id="about">
                     <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-20 lg:px-8">
                         {/* Text Content (Order 2 on Mobile means Image comes first, flip logic if you want text first) */}
-                        <div className="order-2 md:order-1">
+                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                             <h2 className="mb-6 text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl">
                                 ABOUT <span className="text-[#ff0000]">ME</span>
                             </h2>
@@ -158,9 +146,9 @@ const LandingPage = () => {
                                 environments and constantly explore new technologies to stay ahead. I’m always excited to
                                 take on challenges that push me to innovate and build better products.ns.
                             </p>
-                        </div>
+                        </motion.div>
                         {/* Image Content */}
-                        <div className="order-1 flex justify-center md:order-2">
+                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                             <div className="relative aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
                                 <Image
                                     width={500}
@@ -170,25 +158,45 @@ const LandingPage = () => {
                                     src={personalData?.profileImageUrl || "/ashwin.jpg"}
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
                 <section className="py-16 md:py-24 w-full relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" id="skills">
                     <div className="flex flex-col gap-10 @container">
                         <div className="flex flex-col gap-4">
-                            <h2 className="text-white tracking-tight text-3xl font-bold leading-tight sm:text-4xl md:text-5xl max-w-[720px]">
+                            <motion.h2
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="text-4xl font-bold"
+                            >
                                 WHAT I <span className="text-[#ff0000]">DO</span>
-                            </h2>
-                            <p className="text-gray-400 text-base font-normal leading-relaxed max-w-[720px]">
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="text-gray-400 text-base font-normal leading-relaxed max-w-[720px]"
+                            >
                                 From front-end interfaces to back-end logic, I create seamless digital experiences.
                                 Here&apos;s a look at my main areas of expertise.
-                            </p>
+                            </motion.p>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <motion.div
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                        >
                             {skillCards.map((card, index) => (
-                                <div
+                                <motion.div
+                                    key={index}
+                                    variants={fadeUp}
                                     key={index}
                                     className="flex flex-1 gap-4 rounded-xl border border-gray-800 p-6 flex-col shadow-sm transition-transform hover:-translate-y-1 hover:border-[#FF0000]/50"
                                 >
@@ -201,9 +209,9 @@ const LandingPage = () => {
                                             {card.description}
                                         </p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
@@ -214,17 +222,36 @@ const LandingPage = () => {
 
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mb-12 text-center sm:mb-16">
-                            <h2 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl">
+                            <motion.h2
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
+                            >
                                 FEATURED <span className="text-[#ff0000]">PROJECTS</span>
-                            </h2>
-                            <p className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg">
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg"
+                            >
                                 A selection of my best work, showcasing my skills in the MERN stack.
-                            </p>
+                            </motion.p>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+                        <motion.div
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10"
+                        >
                             {projects.slice(0, 3).map((project, index) => (
-                                <div
+                                <motion.div
+                                    variants={fadeUp}
                                     key={index}
                                     className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 transition-all hover:-translate-y-1 hover:border-[#ff0000] hover:shadow-xl hover:shadow-[#ff0000]/10 cursor-default"
                                 >
@@ -262,9 +289,9 @@ const LandingPage = () => {
                                             </Link>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
@@ -272,34 +299,25 @@ const LandingPage = () => {
                 <section className="w-full border-y border-zinc-900 bg-zinc-950/50 py-16 lg:py-24" id="skills">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mb-12 text-center">
-                            <h2 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl">
+                            <motion.h2
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
+                            >
                                 TECHNICAL <span className="text-[#ff0000]">SKILLS</span>
-                            </h2>
-                            <p className="mt-4 text-base text-zinc-400 sm:text-lg">
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="mt-4 text-base text-zinc-400 sm:text-lg"
+                            >
                                 The tools and technologies I use to build modern web applications.
-                            </p>
+                            </motion.p>
                         </div>
-
-                        {/* Grid adapts from 2 cols (mobile) to 3 (sm) to 4 (md) to 6 (lg) */}
-                        {/* <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                            {skills.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className="group flex flex-col items-center gap-3 p-4 transition-all hover:scale-110"
-                                >
-                                    <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-zinc-900 p-4 shadow-sm transition-shadow group-hover:shadow-[0_0_20px_rgba(255,0,0,0.2)]">
-                                        <Image
-                                            width={500}
-                                            height={500}
-                                            alt={skill.name}
-                                            className="h-full w-full object-contain"
-                                            src={skill.Image}
-                                        />
-                                    </div>
-                                    <span className="font-medium text-zinc-300 group-hover:text-[#ff0000]">{skill.name}</span>
-                                </div>
-                            ))}
-                        </div> */}
 
                         {/* <div className=""> */}
                         <Marquee
@@ -342,12 +360,24 @@ const LandingPage = () => {
 
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center">
-                            <h2 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl">
+                            <motion.h2
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
+                            >
                                 GET IN <span className="text-[#ff0000]">TOUCH</span>
-                            </h2>
-                            <p className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg">
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg"
+                            >
                                 Have a project in mind or just want to say hi? Feel free to reach out.
-                            </p>
+                            </motion.p>
                         </div>
 
                         <div className="mx-auto mt-12 max-w-xl">
