@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased cursor-default`}>
                 {children}
             </body>
         </html>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,6 +10,8 @@ export default function Header() {
     const toggleMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
+    const pathname = usePathname();
+
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -78,16 +81,23 @@ export default function Header() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden items-center gap-8 md:flex lg:gap-12">
-                    {navbarMenuItems.map((item, index) => (
-                        <Link
-                            key={index}
-                            className="text-sm font-medium text-zinc-400 transition-colors hover:text-[#ff0000]"
-                            href={`${item.href.toLowerCase()}`}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors active:scale-95">
+                    {navbarMenuItems.map((item, index) => {
+                        const isActive = pathname === item.href; 
+                        return (
+                            <Link
+                                key={index}
+                                className={`text-sm font-medium transition-colors ${
+                                    isActive 
+                                    ? "text-[#ff0000]"
+                                    : "text-zinc-400 hover:text-[#ff0000]"
+                                }`}
+                                href={item.href}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
+                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000] transition-colors active:scale-95">
                         Resume
                     </button>
                 </nav>
@@ -135,17 +145,26 @@ export default function Header() {
                 onClick={(e) => e.stopPropagation()}
             >
                 <nav className="flex flex-col items-center gap-8 text-center">
-                    {navbarMenuItems.map((item, index) => (
-                        <Link
-                            key={index}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="text-3xl font-bold text-zinc-300 transition-colors hover:text-[#ff0000]"
-                            href={`${item.href.toLowerCase()}`}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors active:scale-95">
+                    {navbarMenuItems.map((item, index) => {
+                         const isActive = pathname === item.href;
+                         console.log(isActive);
+                         
+                         return (
+                            <Link
+                                key={index}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className={`text-3xl font-bold transition-colors ${
+                                    isActive 
+                                    ? "text-[#ff0000]" 
+                                    : "text-zinc-400 hover:text-[#ff0000]"
+                                }`}
+                                href={item.href}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+})}
+                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000]  transition-colors active:scale-95">
                         Resume
                     </button>
                 </nav>

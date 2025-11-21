@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { personalData, projects } from "../datas";
+import Link from "next/link";
 
 // Initialize font
 const spaceGrotesk = Space_Grotesk({
@@ -11,52 +13,6 @@ const spaceGrotesk = Space_Grotesk({
     weight: ["300", "400", "500", "600", "700"],
     variable: "--font-space-grotesk",
 });
-
-// Project Data Type
-type Project = {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    type: "Professional" | "Personal";
-    tech: string[];
-    demoLink: string;
-    codeLink: string;
-};
-
-// Sample Data
-const projectsData: Project[] = [
-    {
-        id: "1",
-        title: "E-commerce Platform",
-        description: "A full-stack online store with product listings, cart, and checkout functionalities.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBrUwyEwRx0Qa5OVQHfs3VM_CychHtWADAKJJfUeenzJ8gaij3onSiMSFeOL58Pg_yJvIJhoJRcypbQB4b3trjdCXUmgZWNzUoHET_DJ4yxPNVH67xwD7TMZG1saL9lgtLL18mJfQwS1JAUkH3B96V282qaJa5qk7XufuKBEKk2M1jET_a9_pj1Eaxm4m4VgtKncG0ItSHggCLh0Ev_Ug6KPJ8LJcBrq9l4kx-nwZfXhQaPcPt21Lxy3k_vnDdjaXSBrMlFwmtMHss",
-        type: "Professional",
-        tech: ["React", "Node.js", "MongoDB"],
-        demoLink: "#",
-        codeLink: "#",
-    },
-    {
-        id: "2",
-        title: "Task Management App",
-        description: "A collaborative tool to organize tasks, set deadlines, and track progress with Next.js.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCuayEXtLWjXA5XAOXpWbgrCszbsCEel1uza5Ok3kcMzN1N3xSzJWUHRA3VJF6rpOqNsIFliShUVOxKd3piVqNdV-CbFf6VUYPNQ3l5SHywqEGIepJFEZWGx3NY4Dt2OHmNEjBKQxddv7oNsJ1Q7V_ZqglnIFssr7TUkmwr6al_FzUTMUVDSZ1-gnZ9OkIHRMKl1Cni8G7wUdMcnCaybxLy_lyi8cF39trmwjghhNWLUF5TbJoyP7K1PZn_bG29syflRcFndXDMl4w",
-        type: "Personal",
-        tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-        demoLink: "#",
-        codeLink: "#",
-    },
-    {
-        id: "3",
-        title: "Weather Dashboard",
-        description: "A web app displaying current weather and forecasts using a third-party API.",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxbpE81jqG89ZMQrpv2L5hhag2mh9ki3gKNsf-FRdPkz65r-B_nKDf8ZxvPRoMhgZWY8wmGuuAt0W4YgRMZEkpBc7Kp1xBLPuNaLMfeyGNwglIEynbHWiHRp_vZVIcHAdbLNm4szDGWSgDUsE7N6JVs9JW_oJ6Csphiq6cUabifVWy457Txddtw84VXjQHl0QvxO54OyUO3yxbPkv0kKqm7D0Knh7cN5-UsR5pZ0Po5VysVB14mKR2lFmRcUAdP3ruwzpNt6ew5JM",
-        type: "Personal",
-        tech: ["React", "API"],
-        demoLink: "#",
-        codeLink: "#",
-    },
-];
 
 // Filter Categories
 const categories = ["All", "Professional", "Personal"];
@@ -67,7 +23,7 @@ export default function Projects() {
     const [activeTech, setActiveTech] = useState<string | null>(null);
 
     // Filter Logic
-    const filteredProjects = projectsData.filter((project) => {
+    const filteredProjects = projects.filter((project) => {
         const matchesCategory = activeCategory === "All" || project.type === activeCategory;
         const matchesTech = activeTech ? project.tech.includes(activeTech) : true;
         return matchesCategory && matchesTech;
@@ -124,7 +80,7 @@ export default function Projects() {
                                         <button
                                             key={cat}
                                             onClick={() => setActiveCategory(cat)}
-                                            className={`flex h-full grow items-center justify-center rounded px-4 md:px-6 text-sm font-medium transition-all ${
+                                            className={`flex h-full grow items-center justify-center rounded px-4 md:px-6 text-sm font-medium transition-all cursor-pointer ${
                                                 activeCategory === cat
                                                     ? "bg-[#ff0000] text-white shadow-md"
                                                     : "text-zinc-400 hover:text-white hover:bg-zinc-800"
@@ -144,9 +100,9 @@ export default function Projects() {
                                         <button
                                             key={tag}
                                             onClick={() => toggleTech(tag)}
-                                            className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full border px-4 transition-all text-sm font-medium ${
+                                            className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full border px-4 transition-all text-sm font-medium cursor-pointer ${
                                                 activeTech === tag
-                                                    ? "border-[#ff0000] bg-[#ff0000]/20 text-[#ff0000]"
+                                                    ? "bg-[#ff0000] border-[#ff0000]/80 text-[#ffffff]"
                                                     : "border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
                                             }`}
                                         >
@@ -159,14 +115,14 @@ export default function Projects() {
                             {/* Projects Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                                 {filteredProjects.length > 0 ? (
-                                    filteredProjects.map((project) => (
+                                    filteredProjects.map((project, index) => (
                                         <div
-                                            key={project.id}
-                                            className="group flex flex-col rounded-xl bg-zinc-900 border border-[#ff0000]/20 overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl hover:border-[#ff0000] hover:shadow-[#ff0000]/10"
+                                            key={index}
+                                            className="group flex flex-col rounded-xl bg-zinc-900 border border-[#ff0000] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl  hover:border-[#ff0000] hover:shadow-[#ff0000]/20"
                                         >
                                             <div
                                                 className="w-full bg-center bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500"
-                                                style={{ backgroundImage: `url("${project.image}")` }}
+                                                style={{ backgroundImage: `url("${project.image_url}")` }}
                                                 role="img"
                                                 aria-label={`Screenshot of ${project.title}`}
                                             ></div>
@@ -191,7 +147,7 @@ export default function Projects() {
                                                     {project.tech.map((t) => (
                                                         <span
                                                             key={t}
-                                                            className="flex h-6 items-center justify-center rounded-full bg-zinc-800 px-3 text-xs font-medium text-zinc-300 border border-zinc-700"
+                                                            className="flex h-6 items-center justify-center rounded-full bg-zinc-800 px-3 text-xs font-medium text-zinc-300 border border-zinc-700  hover:bg-white hover:text-[#ff0000]"
                                                         >
                                                             {t}
                                                         </span>
@@ -200,22 +156,22 @@ export default function Projects() {
 
                                                 {/* Buttons */}
                                                 <div className="flex gap-3 mt-auto pt-4">
-                                                    <a
-                                                        href={project.demoLink}
-                                                        className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-[#ff0000] text-white text-sm font-bold gap-2 hover:bg-red-700 transition-colors"
+                                                    <Link
+                                                        href={project.demoLink} target="_blank"
+                                                        className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-[#ff0000] text-white text-sm font-bold gap-2 hover:bg-white hover:text-[#ff0000] transition-colors"
                                                     >
                                                         <span className="material-symbols-outlined text-lg">
                                                             open_in_new
                                                         </span>
                                                         Live Demo
-                                                    </a>
-                                                    <a
-                                                        href={project.codeLink}
+                                                    </Link>
+                                                    <Link
+                                                        href={project.codeLink} target="_blank"
                                                         className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-zinc-800 text-white text-sm font-bold gap-2 hover:bg-zinc-700 transition-colors border border-zinc-700"
                                                     >
                                                         <span className="material-symbols-outlined text-lg">code</span>
                                                         Code
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -254,13 +210,13 @@ export default function Projects() {
                                             I have a variety of other projects, from small experiments to larger
                                             applications. Check out my GitHub profile for a complete list.
                                         </p>
-                                        <a
-                                            href="#"
+                                        <Link
+                                            href={`${personalData?.socialMedia?.github}?tab=repositories` || "#"} target="_blank"
                                             className="mt-4 flex h-12 items-center justify-center rounded-lg bg-[#ff0000] px-8 text-base font-bold text-white shadow-lg shadow-[#ff0000]/20 transition-all hover:bg-red-700 hover:shadow-xl hover:-translate-y-0.5"
                                         >
                                             <span className="material-symbols-outlined mr-2">arrow_forward</span>
                                             View on GitHub
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

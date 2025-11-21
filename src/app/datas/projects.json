@@ -1,0 +1,29 @@
+[
+    {
+        "title": "E-commerce Platform",
+        "description": "A full-stack online store with product listings, cart, and checkout functionalities.",
+        "image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrUwyEwRx0Qa5OVQHfs3VM_CychHtWADAKJJfUeenzJ8gaij3onSiMSFeOL58Pg_yJvIJhoJRcypbQB4b3trjdCXUmgZWNzUoHET_DJ4yxPNVH67xwD7TMZG1saL9lgtLL18mJfQwS1JAUkH3B96V282qaJa5qk7XufuKBEKk2M1jET_a9_pj1Eaxm4m4VgtKncG0ItSHggCLh0Ev_Ug6KPJ8LJcBrq9l4kx-nwZfXhQaPcPt21Lxy3k_vnDdjaXSBrMlFwmtMHss",
+        "type": "Professional",
+        "tech": ["React", "Node.js", "MongoDB"],
+        "demoLink": "#",
+        "codeLink": "#"
+    },
+    {
+        "title": "Task Management App",
+        "description": "A collaborative tool to organize tasks, set deadlines, and track progress with Next.js.",
+        "image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCuayEXtLWjXA5XAOXpWbgrCszbsCEel1uza5Ok3kcMzN1N3xSzJWUHRA3VJF6rpOqNsIFliShUVOxKd3piVqNdV-CbFf6VUYPNQ3l5SHywqEGIepJFEZWGx3NY4Dt2OHmNEjBKQxddv7oNsJ1Q7V_ZqglnIFssr7TUkmwr6al_FzUTMUVDSZ1-gnZ9OkIHRMKl1Cni8G7wUdMcnCaybxLy_lyi8cF39trmwjghhNWLUF5TbJoyP7K1PZn_bG29syflRcFndXDMl4w",
+        "type": "Personal",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+        "demoLink": "#",
+        "codeLink": "#"
+    },
+    {
+        "title": "Weather Dashboard",
+        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCxbpE81jqG89ZMQrpv2L5hhag2mh9ki3gKNsf-FRdPkz65r-B_nKDf8ZxvPRoMhgZWY8wmGuuAt0W4YgRMZEkpBc7Kp1xBLPuNaLMfeyGNwglIEynbHWiHRp_vZVIcHAdbLNm4szDGWSgDUsE7N6JVs9JW_oJ6Csphiq6cUabifVWy457Txddtw84VXjQHl0QvxO54OyUO3yxbPkv0kKqm7D0Knh7cN5-UsR5pZ0Po5VysVB14mKR2lFmRcUAdP3ruwzpNt6ew5JM",
+        "type": "Personal",
+        "tech": ["React", "API"],
+        "demoLink": "#",
+        "codeLink": "#"
+    }
+]

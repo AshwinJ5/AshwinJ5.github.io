@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { personalData } from "../datas";
 
 // Initialize font
 const inter = Inter({
@@ -13,7 +14,6 @@ const inter = Inter({
 });
 
 export default function Contact() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -53,7 +53,7 @@ export default function Contact() {
                 <div className="absolute bottom-0 -right-48 h-160 w-160 bg-red-900/30 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
 
                 {/* Header */}
-                <Header/>
+                <Header />
 
                 <main className="flex-1 z-10">
                     <div className="container mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24 lg:py-32">
@@ -74,20 +74,22 @@ export default function Contact() {
                                     {/* Email */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href="mailto:ashwinjoseph03@gmail.com"
+                                        href={`mailto:${personalData?.email}` || "#"} target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <span className="material-symbols-outlined">mail</span>
                                         </div>
                                         <div className="flex-1">
-                                            <p className="truncate text-base font-medium text-white">ashwinjoseph03@gmail.com</p>
+                                            <p className="truncate text-base font-medium text-white">
+                                                ashwinjoseph03@gmail.com
+                                            </p>
                                         </div>
                                     </Link>
 
                                     {/* LinkedIn */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href="#"
+                                        href={personalData?.socialMedia?.linkedin || "#"} target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <svg
@@ -115,7 +117,7 @@ export default function Contact() {
                                     {/* GitHub */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href="#"
+                                        href={personalData?.socialMedia?.github || "#"} target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <svg
@@ -203,7 +205,7 @@ export default function Contact() {
                                                 ></textarea>
                                             </div>
                                             <button
-                                                className="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#FF0000] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all"
+                                                className="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#FF0000] text-white text-sm font-bold leading-normal tracking-[0.015em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all  hover:bg-white hover:text-[#ff0000]"
                                                 type="submit"
                                             >
                                                 <span className="truncate">Send Message</span>
@@ -214,8 +216,8 @@ export default function Contact() {
                             </div>
                         </div>
                     </div>
-                </main>  
-                <Footer/>    
+                </main>
+                <Footer />
             </div>
         </div>
     );
