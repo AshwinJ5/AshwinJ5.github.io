@@ -11,7 +11,11 @@ export default function Header() {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
     const pathname = usePathname();
+    const [currentPath, setCurrentPath] = useState("");
 
+    useEffect(() => {
+        setCurrentPath(pathname);
+    }, [pathname]);
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -82,14 +86,12 @@ export default function Header() {
                 {/* Desktop Nav */}
                 <nav className="hidden items-center gap-8 md:flex lg:gap-12">
                     {navbarMenuItems.map((item, index) => {
-                        const isActive = pathname === item.href; 
+                        const isActive = currentPath === item.href;
                         return (
                             <Link
                                 key={index}
                                 className={`text-sm font-medium transition-colors ${
-                                    isActive 
-                                    ? "text-[#ff0000]"
-                                    : "text-zinc-400 hover:text-[#ff0000]"
+                                    isActive ? "text-[#ff0000]" : "text-zinc-400 hover:text-[#ff0000]"
                                 }`}
                                 href={item.href}
                             >
@@ -97,9 +99,13 @@ export default function Header() {
                             </Link>
                         );
                     })}
-                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000] transition-colors active:scale-95">
+                    <Link
+                        href="/resume.pdf"
+                        download="Ashwin-Joseph-Resume.pdf"
+                        className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000] transition-colors active:scale-95"
+                    >
                         Resume
-                    </button>
+                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -146,27 +152,29 @@ export default function Header() {
             >
                 <nav className="flex flex-col items-center gap-8 text-center">
                     {navbarMenuItems.map((item, index) => {
-                         const isActive = pathname === item.href;
-                         console.log(isActive);
-                         
-                         return (
+                        const isActive = currentPath === item.href;
+                        console.log(isActive);
+
+                        return (
                             <Link
                                 key={index}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`text-3xl font-bold transition-colors ${
-                                    isActive 
-                                    ? "text-[#ff0000]" 
-                                    : "text-zinc-400 hover:text-[#ff0000]"
+                                    isActive ? "text-[#ff0000]" : "text-zinc-400 hover:text-[#ff0000]"
                                 }`}
                                 href={item.href}
                             >
                                 {item.name}
                             </Link>
                         );
-})}
-                    <button className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000]  transition-colors active:scale-95">
+                    })}
+                    <Link
+                        href="/resume.pdf"
+                        download="Ashwin-Joseph-Resume.pdf"
+                        className="flex h-10 px-6 cursor-pointer items-center justify-center rounded-lg bg-[#ff0000] text-white text-sm font-bold tracking-wide hover:bg-white hover:text-[#ff0000]  transition-colors active:scale-95"
+                    >
                         Resume
-                    </button>
+                    </Link>
                 </nav>
             </div>
         </header>

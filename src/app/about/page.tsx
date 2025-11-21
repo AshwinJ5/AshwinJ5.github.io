@@ -58,9 +58,12 @@ export default function AboutMe() {
                                         >
                                             <span className="truncate">View My Projects</span>
                                         </Link>
-                                        <button className="flex h-10 items-center justify-center rounded-lg border border-slate-700 bg-transparent px-5 text-sm font-bold leading-normal tracking-wide text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer">
+                                        <a
+                                        href="/resume.pdf"
+                                        download="Ashwin-Joseph-Resume.pdf" 
+                                        className="flex h-10 items-center justify-center rounded-lg border border-slate-700 bg-transparent px-5 text-sm font-bold leading-normal tracking-wide text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer">
                                             <span className="truncate">Download Resume</span>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </section>
