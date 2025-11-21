@@ -9,15 +9,17 @@ import { personalData, skills, projects } from "../datas";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
-    const fadeUp = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-    };
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
 
     const stagger = {
         hidden: {},
         visible: { transition: { staggerChildren: 0.15 } },
     };
+    
 
     const skillCards = [
         {
@@ -197,7 +199,6 @@ const LandingPage = () => {
                                 <motion.div
                                     key={index}
                                     variants={fadeUp}
-                                    key={index}
                                     className="flex flex-1 gap-4 rounded-xl border border-gray-800 p-6 flex-col shadow-sm transition-transform hover:-translate-y-1 hover:border-[#FF0000]/50"
                                 >
                                     <div className="text-[#FF0000]">

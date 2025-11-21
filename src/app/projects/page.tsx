@@ -19,15 +19,29 @@ const spaceGrotesk = Space_Grotesk({
 const categories = ["All", "Professional", "Personal"];
 const techTags = ["MongoDB", "Next.js", "TypeScript", "Nest.js", "React", "Tailwind CSS"];
 
-// Variants
+// Fixed Variants with proper TypeScript types
 const headerVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: { 
+        opacity: 1, 
+        y: 0, 
+        transition: { 
+            duration: 0.5, 
+            ease: "easeOut" as const 
+        } 
+    },
 };
 
 const filterBarVariants = {
     hidden: { opacity: 0, y: 12 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+    visible: { 
+        opacity: 1, 
+        y: 0, 
+        transition: { 
+            duration: 0.4, 
+            ease: "easeOut" as const 
+        } 
+    },
 };
 
 const gridVariants = {
@@ -40,8 +54,22 @@ const gridVariants = {
 
 const cardVariants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.25, ease: "easeOut" } },
-    exit: { opacity: 0, scale: 0.9, transition: { duration: 0.2, ease: "easeIn" } },
+    visible: { 
+        opacity: 1, 
+        scale: 1, 
+        transition: { 
+            duration: 0.25, 
+            ease: "easeOut" as const 
+        } 
+    },
+    exit: { 
+        opacity: 0, 
+        scale: 0.9, 
+        transition: { 
+            duration: 0.2, 
+            ease: "easeIn" as const 
+        } 
+    },
 };
 
 export default function Projects() {
@@ -146,7 +174,7 @@ export default function Projects() {
                         animate="visible"
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
                         transition={{
-                            layout: { duration: 0.35, ease: "easeInOut" },
+                            layout: { duration: 0.35, ease: "easeInOut" as const },
                         }}
                     >
                         <AnimatePresence initial={false}>
@@ -160,7 +188,7 @@ export default function Projects() {
                                         animate="visible"
                                         exit="exit"
                                         transition={{
-                                            layout: { duration: 0.35, ease: "easeInOut" },
+                                            layout: { duration: 0.35, ease: "easeInOut" as const },
                                         }}
                                         whileHover={{ y: -4, boxShadow: "0 18px 45px rgba(0,0,0,0.45)" }}
                                         className="group flex flex-col rounded-xl bg-zinc-900 border border-[#ff0000] overflow-hidden transition-colors hover:border-[#ff3333]"
@@ -265,7 +293,7 @@ export default function Projects() {
                         initial={{ opacity: 0, scale: 0.97 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, amount: 0.4 }}
-                        transition={{ duration: 0.45, ease: "easeOut" }}
+                        transition={{ duration: 0.45, ease: "easeOut" as const }}
                         className="mt-16 mb-12 rounded-xl bg-zinc-900 p-8 md:p-12 border border-zinc-800 text-center relative overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,0,0,0.18),transparent_55%)] opacity-60 pointer-events-none" />
