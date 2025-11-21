@@ -1,18 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { personalData } from "../datas";
 
 // Initialize font
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
-    variable: "--font-inter",
+    weight: ["300", "400", "500", "600", "700"],
+    variable: "--font-space-grotesk",
 });
-
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: "",
@@ -34,16 +34,15 @@ export default function Contact() {
 
     return (
         <div
-            className={`${inter.variable} font-sans bg-black text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
+            className={`${spaceGrotesk.variable} font-sans bg-black text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
         >
             {/* Load Material Symbols Font */}
-            <link
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-                rel="stylesheet"
-            />
             <style jsx global>{`
                 .material-symbols-outlined {
                     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+                }
+                .font-display {
+                    font-family: var(--font-space-grotesk), sans-serif;
                 }
             `}</style>
 
@@ -74,7 +73,8 @@ export default function Contact() {
                                     {/* Email */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href={`mailto:${personalData?.email}` || "#"} target="_blank"
+                                        href={`mailto:${personalData?.email}` || "#"}
+                                        target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <span className="material-symbols-outlined">mail</span>
@@ -89,7 +89,8 @@ export default function Contact() {
                                     {/* LinkedIn */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href={personalData?.socialMedia?.linkedin || "#"} target="_blank"
+                                        href={personalData?.socialMedia?.linkedin || "#"}
+                                        target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <svg
@@ -117,7 +118,8 @@ export default function Contact() {
                                     {/* GitHub */}
                                     <Link
                                         className="group flex items-center gap-4 rounded-lg p-3 -m-3 transition-colors "
-                                        href={personalData?.socialMedia?.github || "#"} target="_blank"
+                                        href={personalData?.socialMedia?.github || "#"}
+                                        target="_blank"
                                     >
                                         <div className="text-gray-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-900 group-hover:bg-[#FF0000] transition-colors">
                                             <svg

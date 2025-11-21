@@ -40,10 +40,6 @@ export default function Projects() {
     return (
         <div className={`${spaceGrotesk.variable} font-sans bg-black text-white min-h-screen flex flex-col`}>
             {/* External Styles for Icons */}
-            <link
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-                rel="stylesheet"
-            />
 
             <style jsx global>{`
                 .material-symbols-outlined {

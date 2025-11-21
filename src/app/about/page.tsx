@@ -1,29 +1,31 @@
 "use client";
 
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { experiences, skills, education } from "../datas";
 
 // Initialize Font
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
-    variable: "--font-inter",
+    weight: ["300", "400", "500", "600", "700"],
+    variable: "--font-space-grotesk",
 });
 
 export default function AboutMe() {
     return (
-        <div className={`${inter.variable} font-sans bg-black text-slate-200 selection:bg-[#ff0000] selection:text-white`}>
-            {/* Load Material Symbols Font */}
-            <link
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-                rel="stylesheet"
-            />
+        <div
+            className={`${spaceGrotesk.variable} font-sans bg-black text-slate-200 selection:bg-[#ff0000] selection:text-white`}
+        >
+
 
             <style jsx global>{`
                 .material-symbols-outlined {
                     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+                }
+                .font-display {
+                    font-family: var(--font-space-grotesk), sans-serif;
                 }
             `}</style>
 
@@ -47,9 +49,9 @@ export default function AboutMe() {
                                         About <span className="text-[#ff0000]">Me</span>
                                     </h1>
                                     <p className="max-w-2xl text-lg text-slate-400 leading-relaxed">
-                                        I&apos;m a passionate MERN stack developer, specializing in creating modern,
-                                        responsive, and user-friendly web applications. I thrive on solving complex problems
-                                        and turning ideas into reality with clean and efficient code.
+                                        I’m a MERN stack developer who loves turning ideas into engaging digital
+                                        experiences. With a problem-solving mindset and a focus on performance, I build
+                                        responsive applications through clean and scalable code.
                                     </p>
                                     <div className="mt-2 flex justify-center gap-4 md:justify-start">
                                         <Link
@@ -59,9 +61,10 @@ export default function AboutMe() {
                                             <span className="truncate">View My Projects</span>
                                         </Link>
                                         <a
-                                        href="/resume.pdf"
-                                        download="Ashwin-Joseph-Resume.pdf" 
-                                        className="flex h-10 items-center justify-center rounded-lg border border-slate-700 bg-transparent px-5 text-sm font-bold leading-normal tracking-wide text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer">
+                                            href="/resume.pdf"
+                                            download="Ashwin-Joseph-Resume.pdf"
+                                            className="flex h-10 items-center justify-center rounded-lg border border-slate-700 bg-transparent px-5 text-sm font-bold leading-normal tracking-wide text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
+                                        >
                                             <span className="truncate">Download Resume</span>
                                         </a>
                                     </div>
@@ -128,7 +131,9 @@ export default function AboutMe() {
                                 {education.map((item, index) => (
                                     <div key={index} className="flex items-start gap-6 group">
                                         <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-[#ff0000] bg-black shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
-                                            <span className="material-symbols-outlined text-[#ff0000] text-lg">{item.label}</span>
+                                            <span className="material-symbols-outlined text-[#ff0000] text-lg">
+                                                {item.label}
+                                            </span>
                                         </div>
 
                                         <div>

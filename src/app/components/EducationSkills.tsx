@@ -1,10 +1,13 @@
 "use client";
 
+import { educationData, skills } from "../datas";
 import Footer from "./Footer";
 import Header from "./Header";
 import { useEffect, useRef, useState } from "react";
 
-// Initialize font
+const skillsWithPercentage = skills.filter((skill) => typeof skill.percentage === "number");
+const mid = Math.ceil(skillsWithPercentage.length / 2);
+const skillColumns = [skillsWithPercentage.slice(0, mid), skillsWithPercentage.slice(mid)];
 
 export default function EducationSkills() {
     return (
@@ -48,9 +51,9 @@ export default function EducationSkills() {
                                     Education & <span className="text-[#ff0000]">Skills</span>
                                 </h1>
                                 <p className="text-gray-400 max-w-2xl text-lg sm:text-xl leading-relaxed">
-                                    {
-                                        "                  My academic background and the technical skills I've cultivated. From foundational computer science principles to the latest in web development, here's a look at the tools and knowledge I bring to the table."
-                                    }
+                                    
+                                        My academic path started with a foundation in Mechanical Engineering, which shaped my analytical and problem-solving mindset. Later, I transitioned into modern software development through structured full-stack training, equipping me with practical expertise in building scalable digital solutions.
+                                    
                                 </p>
                             </div>
 
@@ -60,50 +63,24 @@ export default function EducationSkills() {
                                     Education
                                 </h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 [&>*:last-child:nth-child(odd)]:md:col-span-2 [&>*:last-child:nth-child(odd)]:md:justify-self-center">
-                                    {/* Card 1 */}
-                                    <div className="group flex flex-col items-start justify-start rounded-xl border border-[#222222] bg-zinc-950/50 p-6 sm:p-8 transition-all hover:border-[#ff0000]/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)]">
-                                        <div className="flex flex-col items-start justify-start gap-2">
-                                            <p className="text-xl font-bold leading-tight tracking-tight group-hover:text-[#ff0000] transition-colors">
-                                                <span className="text-[#ff0000] mr-2">▪</span> State University
-                                            </p>
-                                            <div className="flex flex-col gap-1 pl-5 border-l border-zinc-800 ml-1.5 mt-2">
-                                                <p className="text-gray-300 text-base sm:text-lg font-medium pl-4">
-                                                    Bachelor of Science in Computer Science
+                                    {educationData.map((item, index) => (
+                                        <div
+                                            key={index}
+                                            className="group flex flex-col items-start justify-start rounded-xl border border-[#222222] bg-zinc-950/50 p-6 sm:p-8 transition-all hover:border-[#ff0000]/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)]"
+                                        >
+                                            <div className="flex flex-col items-start justify-start gap-2">
+                                                <p className="text-xl font-bold leading-tight tracking-tight group-hover:text-[#ff0000] transition-colors">
+                                                    <span className="text-[#ff0000] mr-2">▪</span> {item.title}
                                                 </p>
-                                                <p className="text-gray-500 text-sm pl-4">Graduated: May 2022</p>
+                                                <div className="flex flex-col gap-1 pl-5 border-l border-zinc-800 ml-1.5 mt-2">
+                                                    <p className="text-gray-300 text-base sm:text-lg font-medium pl-4">
+                                                        {item.degree}
+                                                    </p>
+                                                    <p className="text-gray-500 text-sm pl-4">{item.date}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    {/* Card 2 */}
-                                    <div className="group flex flex-col items-start justify-start rounded-xl border border-[#222222] bg-zinc-950/50 p-6 sm:p-8 transition-all hover:border-[#ff0000]/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)]">
-                                        <div className="flex flex-col items-start justify-start gap-2">
-                                            <p className="text-xl font-bold leading-tight tracking-tight group-hover:text-[#ff0000] transition-colors">
-                                                <span className="text-[#ff0000] mr-2">▪</span> Tech Bootcamp
-                                            </p>
-                                            <div className="flex flex-col gap-1 pl-5 border-l border-zinc-800 ml-1.5 mt-2">
-                                                <p className="text-gray-300 text-base sm:text-lg font-medium pl-4">
-                                                    Full-Stack Web Development Certificate
-                                                </p>
-                                                <p className="text-gray-500 text-sm pl-4">Completed: December 2022</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Card 2 */}
-                                    <div className="group flex flex-col items-start justify-start rounded-xl border border-[#222222] bg-zinc-950/50 p-6 sm:p-8 transition-all hover:border-[#ff0000]/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)]">
-                                        <div className="flex flex-col items-start justify-start gap-2">
-                                            <p className="text-xl font-bold leading-tight tracking-tight group-hover:text-[#ff0000] transition-colors">
-                                                <span className="text-[#ff0000] mr-2">▪</span> Tech Bootcamp
-                                            </p>
-                                            <div className="flex flex-col gap-1 pl-5 border-l border-zinc-800 ml-1.5 mt-2">
-                                                <p className="text-gray-300 text-base sm:text-lg font-medium pl-4">
-                                                    Full-Stack Web Development Certificate
-                                                </p>
-                                                <p className="text-gray-500 text-sm pl-4">Completed: December 2022</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </section>
 
@@ -112,22 +89,15 @@ export default function EducationSkills() {
                                 <h2 className="text-2xl sm:text-3xl font-bold leading-tight mb-8 sm:mb-12 border-l-4 border-[#ff0000] pl-4">
                                     Technical Skills
                                 </h2>
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-                                    {/* Column 1 */}
-                                    <div className="flex flex-col gap-6 sm:gap-8">
-                                        <SkillBar name="React" percentage={95} />
-                                        <SkillBar name="Next.js" percentage={90} />
-                                        <SkillBar name="Node.js" percentage={85} />
-                                        <SkillBar name="TypeScript" percentage={80} />
-                                    </div>
 
-                                    {/* Column 2 */}
-                                    <div className="flex flex-col gap-6 sm:gap-8">
-                                        <SkillBar name="MongoDB" percentage={90} />
-                                        <SkillBar name="Tailwind CSS" percentage={95} />
-                                        <SkillBar name="Docker" percentage={75} />
-                                        <SkillBar name="Git" percentage={95} />
-                                    </div>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+                                    {skillColumns.map((column, index) => (
+                                        <div key={index} className="flex flex-col gap-6 sm:gap-8">
+                                            {column.map((skill, idx) => (
+                                                <SkillBar key={idx} name={skill.name} percentage={skill.percentage!} />
+                                            ))}
+                                        </div>
+                                    ))}
                                 </div>
                             </section>
                         </div>

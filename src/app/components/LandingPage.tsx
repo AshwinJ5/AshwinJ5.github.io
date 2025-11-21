@@ -77,8 +77,9 @@ const LandingPage = () => {
                             </h1>
 
                             <p className="mb-8 max-w-xl text-base font-light leading-relaxed text-zinc-400 sm:text-lg md:text-xl">
-                                Hello, I&apos;m Ashwin Joseph. A developer crafting scalable & performant web applications.
-                                I turn complex problems into elegant, user-friendly solutions.
+                                {
+                                    "Hello, I'm Ashwin Joseph — a developer focused on crafting scalable and high-performance web applications. I turn complex problems into elegant, user-friendly solutions."
+                                }
                             </p>
 
                             <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center pointer-events-auto">
@@ -154,13 +155,14 @@ const LandingPage = () => {
                                 ABOUT <span className="text-[#ff0000]">ME</span>
                             </h2>
                             <p className="mb-6 text-base font-normal leading-relaxed text-zinc-400 sm:text-lg">
-                                With a passion for building beautiful and functional web applications, I have dedicated
-                                myself to mastering the MERN stack (MongoDB, Express.js, React, Node.js).
+                                I’m a MERN stack developer with a strong focus on building high-performance and visually
+                                engaging web applications. I enjoy turning ideas into intuitive digital experiences using
+                                clean architecture and scalable code.
                             </p>
                             <p className="text-base font-normal leading-relaxed text-zinc-400 sm:text-lg">
-                                My journey in software development is driven by a desire to solve complex problems with
-                                clean, efficient code. I thrive in collaborative environments and am always eager to learn
-                                new technologies.
+                                With a curious mindset and a love for problem-solving, I thrive in collaborative
+                                environments and constantly explore new technologies to stay ahead. I’m always excited to
+                                take on challenges that push me to innovate and build better products.ns.
                             </p>
                         </div>
                         {/* Image Content */}
