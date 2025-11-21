@@ -5,35 +5,9 @@ import Particles from "./Particles";
 import Footer from "./Footer";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { personalData, skills } from "../datas";
+import { personalData, skills, projects } from "../datas";
 
 const LandingPage = () => {
-    const projects = [
-        {
-            title: "E-commerce Platform",
-            description:
-                "A full-featured e-commerce site with product management, user authentication, and a Stripe payment gateway.",
-            tags: ["React", "Node.js", "MongoDB"],
-            image: "/portfolio.png",
-            link: "#",
-        },
-        {
-            title: "ConnectSphere",
-            description:
-                "A social app allowing users to post updates, follow others, and engage with content in real-time using WebSockets.",
-            tags: ["React", "Express", "Socket.IO"],
-            image: "/portfolio.png",
-            link: "#",
-        },
-        {
-            title: "TaskFlow",
-            description:
-                "A Kanban-style task board with drag-and-drop functionality for managing projects and workflows efficiently.",
-            tags: ["Next.js", "Tailwind", "Redux"],
-            image: "/portfolio.png",
-            link: "#",
-        },
-    ];
 
     return (
         <div className={`font-sans bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
@@ -196,18 +170,18 @@ const LandingPage = () => {
                         </div>
 
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-                            {projects.map((project, index) => (
+                            {projects.slice(0,3).map((project, index) => (
                                 <div
                                     key={index}
                                     className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 transition-all hover:-translate-y-1 hover:border-[#ff0000] hover:shadow-xl hover:shadow-[#ff0000]/10 cursor-default"
                                 >
                                     <div className="aspect-video w-full overflow-hidden">
                                         <Image
-                                            width={500}
-                                            height={500}
+                                            width={300}
+                                            height={300}
                                             alt={project.title}
                                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                            src={project.image}
+                                            src={project.image_url}
                                         />
                                     </div>
                                     <div className="flex flex-1 flex-col p-6">
@@ -217,7 +191,7 @@ const LandingPage = () => {
                                         </p>
                                         <div className="flex items-center justify-between">
                                             <div className="flex flex-wrap gap-2 text-xs text-zinc-400">
-                                                {project.tags.map((tag, tagIndex) => (
+                                                {project.tech.slice(0,3).map((tag, tagIndex) => (
                                                     <span
                                                         key={tagIndex}
                                                         className="rounded-full bg-zinc-800 px-2.5 py-1 font-medium hover:bg-[#ff0000] hover:text-white transition-colors text-center"
@@ -228,7 +202,7 @@ const LandingPage = () => {
                                             </div>
                                             <Link
                                                 className="text-sm font-bold text-[#ff0000] hover:underline"
-                                                href={project.link}
+                                                href={project.demoLink}
                                                 target="_blank"
                                             >
                                                 Demo →

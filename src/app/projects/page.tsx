@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 
 // Filter Categories
 const categories = ["All", "Professional", "Personal"];
-const techTags = ["React", "Next.js", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS"];
+const techTags = ["MongoDB", "Next.js", "TypeScript", "Nest.js", "React", "Tailwind CSS"];
 
 export default function Projects() {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -117,7 +117,7 @@ export default function Projects() {
                                             className="group flex flex-col rounded-xl bg-zinc-900 border border-[#ff0000] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl  hover:border-[#ff0000] hover:shadow-[#ff0000]/20"
                                         >
                                             <div
-                                                className="w-full bg-center bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500"
+                                                className="w-full bg-center bg-top bg-no-repeat aspect-video bg-cover group-hover:scale-105 transition-transform duration-500"
                                                 style={{ backgroundImage: `url("${project.image_url}")` }}
                                                 role="img"
                                                 aria-label={`Screenshot of ${project.title}`}
@@ -162,14 +162,14 @@ export default function Projects() {
                                                         </span>
                                                         Live Demo
                                                     </Link>
-                                                    <Link
+                                                    {project.codeLink &&<Link
                                                         href={project.codeLink}
                                                         target="_blank"
                                                         className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-zinc-800 text-white text-sm font-bold gap-2 hover:bg-zinc-700 transition-colors border border-zinc-700"
                                                     >
                                                         <span className="material-symbols-outlined text-lg">code</span>
                                                         Code
-                                                    </Link>
+                                                    </Link>}
                                                 </div>
                                             </div>
                                         </div>
