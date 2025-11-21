@@ -53,34 +53,15 @@ export default function Header() {
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                 {/* Logo - Z-index ensures it stays above overlay if needed */}
                 <Link className="relative z-50 flex items-center gap-2 transition-opacity hover:opacity-80" href="/">
-                    <svg
-                        width="40px"
-                        height="40px"
-                        viewBox="-12.8 -12.8 153.60 153.60"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                        role="img"
-                        className="iconify iconify--noto "
-                    >
-                        <path
-                            d="M115.37 117.77L77.78 17.81a2.242 2.242 0 0 0-2.1-1.45H52.32c-.94 0-1.77.58-2.1 1.45l-37.59 99.96c-.26.69-.17 1.46.25 2.06s1.1.97 1.84.97h24.64c.96 0 1.82-.62 2.13-1.54l5.7-17.18H80.8l5.71 17.18c.3.92 1.16 1.54 2.13 1.54h24.64a2.236 2.236 0 0 0 2.09-3.03zm-61.14-36.9L64 51.45l9.77 29.43H54.23z"
-                            fill="#ff0000"
-                        ></path>
-                    </svg>
-                    <svg
-                        width="40px"
-                        height="40px"
-                        viewBox="-12.8 -12.8 153.60 153.60"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                        role="img"
-                        className="iconify iconify--noto"
-                    >
-                        <path
-                            d="M100.08 16.44H75.44c-1.24 0-2.24 1-2.24 2.24v45.53c.31 10.84-.18 23.69-1.52 25.89c-.1.13-.2.28-.27.43c-1.6 3.33-6.9 6.78-12.99 6.78c-6.33 0-13.78-5.46-15.94-11.68a2.24 2.24 0 0 0-2.79-1.41l-20.47 6.41c-1.06.33-1.7 1.38-1.53 2.48c.01.07.03.14.04.2c2.32 17.58 18.94 29.38 41.46 29.38c22.53 0 39.16-11.81 41.48-29.4c.02-.1.04-.19.05-.29c1.56-15.02 1.58-28.71 1.58-28.85V18.68c.02-1.23-.98-2.24-2.22-2.24z"
-                            fill="#ff0000"
-                        ></path>
-                    </svg>
+                    <div className="flex items-center text-2xl font-bold gap-2">
+                        <span className="text-[#FF0000] font-bold">
+                            &lt;<span className="text-white font-bold">Ashwin</span>
+                        </span>
+
+                        <span className="font-bold text-[#ff0000]">
+                            Joseph<span className="text-[#FF0000] font-bold">/&gt;</span>
+                        </span>
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}
