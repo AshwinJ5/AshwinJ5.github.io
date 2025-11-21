@@ -147,7 +147,7 @@ const LandingPage = () => {
                                     height={500}
                                     alt="Developer portrait"
                                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                                    src="/portfolio.png"
+                                    src={personalData?.profileImageUrl || "/ashwin.jpg"}
                                 />
                             </div>
                         </div>

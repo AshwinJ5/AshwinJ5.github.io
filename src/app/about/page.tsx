@@ -4,7 +4,7 @@ import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { experiences, skills, education } from "../datas";
+import { experiences, skills, education, personalData } from "../datas";
 import Container from "../components/Container"; // ⬅️ Import the wrapper
 
 // Initialize Font
@@ -16,7 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function AboutMe() {
     return (
-        <div className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}>
+        <div
+            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}
+        >
             {/* Global Styles */}
             <style jsx global>{`
                 .material-symbols-outlined {
@@ -37,7 +39,9 @@ export default function AboutMe() {
                         <div
                             className="h-40 w-40 shrink-0 rounded-full border-4 border-[#ff0000] bg-cover bg-center bg-no-repeat shadow-xl shadow-[#ff0000]/20"
                             style={{
-                                backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk97XUWvUlPKmZlAjwW9Pfaf5MpYyTMV-xe3TU4-24khfYbUsNBs_iHpA5osnJuC3-ToAz0SMrsbYNPUidHEQkvir7orMTfjheJicm3Lx1i9QSdVSmzqWX1PZ6rJYtwxS4XZSSSvSfjGwT7Dep9O85i86rJ2GgZkDcl-468MYoksaar75Lbm02YuuxM5yDq0PHlVoJ93P-6wxmPFVu6X8iBYHf6qzmQAqLiYMLbLcDaHAa78dfBgbCc3mdqaJIf15_b296qS4cT4g")',
+                                backgroundImage: personalData?.profileImageUrl
+                                    ? `url(${personalData.profileImageUrl})`
+                                    : 'url("/ashwin.jpg")',
                             }}
                         ></div>
 
@@ -46,9 +50,9 @@ export default function AboutMe() {
                                 About <span className="text-[#ff0000]">Me</span>
                             </h1>
                             <p className="max-w-2xl text-lg text-slate-400 leading-relaxed">
-                                I’m a MERN stack developer who builds scalable and high-performance web applications.
-                                With a strong focus on clean architecture and responsive design, I enjoy turning ideas
-                                into intuitive digital products.
+                                I’m a MERN stack developer who builds scalable and high-performance web applications. With a
+                                strong focus on clean architecture and responsive design, I enjoy turning ideas into
+                                intuitive digital products.
                             </p>
                             <div className="mt-2 flex justify-center gap-4 md:justify-start">
                                 <Link
