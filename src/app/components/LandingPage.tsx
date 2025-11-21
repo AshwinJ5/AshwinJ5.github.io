@@ -9,17 +9,27 @@ import { personalData, skills, projects } from "../datas";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
-
+    // Fixed variants with proper TypeScript types
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut" as const,
+            },
+        },
+    };
 
     const stagger = {
         hidden: {},
-        visible: { transition: { staggerChildren: 0.15 } },
+        visible: {
+            transition: {
+                staggerChildren: 0.15,
+            },
+        },
     };
-    
 
     const skillCards = [
         {
@@ -62,7 +72,7 @@ const fadeUp = {
                 <motion.section
                     initial="hidden"
                     animate="visible"
-                    variants={fadeUp}
+                    variants={stagger}
                     className="relative flex min-h-[calc(100vh-80px)] items-center justify-center py-16 lg:py-24 overflow-hidden"
                 >
                     {" "}
@@ -101,7 +111,7 @@ const fadeUp = {
                                 <div>
                                     <Link
                                         href="/projects"
-                                        className="flex h-14 items-center justify-center rounded-full bg-[#ff0000] px-8 font-bold hover:bg-white hover:text-[#ff0000]"
+                                        className="flex h-12 items-center justify-center rounded-full bg-[#ff0000] px-4 font-bold hover:bg-white hover:text-[#ff0000]"
                                     >
                                         Explore Projects
                                     </Link>
@@ -112,9 +122,9 @@ const fadeUp = {
                                         personalData?.socialMedia?.linkedin,
                                         `mailto:${personalData?.email}`,
                                     ].map((link, i) => (
-                                        <motion.div key={i}>
+                                        <motion.div key={i} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                                             <Link
-                                                href={link}
+                                                href={link || "#"}
                                                 target="_blank"
                                                 className="flex items-center justify-center w-12 h-12 rounded-full border border-zinc-800 bg-zinc-900 hover:bg-[#ff0000] hover:text-white"
                                             >
@@ -133,20 +143,20 @@ const fadeUp = {
                 {/* About Section */}
                 <section className="relative w-full py-16 sm:py-20 lg:py-32" id="about">
                     <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-20 lg:px-8">
-                        {/* Text Content (Order 2 on Mobile means Image comes first, flip logic if you want text first) */}
+                        {/* Text Content */}
                         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                             <h2 className="mb-6 text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl">
                                 ABOUT <span className="text-[#ff0000]">ME</span>
                             </h2>
                             <p className="mb-6 text-base font-normal leading-relaxed text-zinc-400 sm:text-lg">
-                                I’m a MERN stack developer with a strong focus on building high-performance and visually
-                                engaging web applications. I enjoy turning ideas into intuitive digital experiences using
-                                clean architecture and scalable code.
+                                {
+                                    "I'm a MERN stack developer with a strong focus on building high-performance and visually engaging web applications. I enjoy turning ideas into intuitive digital experiences using clean architecture and scalable code."
+                                }
                             </p>
                             <p className="text-base font-normal leading-relaxed text-zinc-400 sm:text-lg">
-                                With a curious mindset and a love for problem-solving, I thrive in collaborative
-                                environments and constantly explore new technologies to stay ahead. I’m always excited to
-                                take on challenges that push me to innovate and build better products.ns.
+                                {
+                                    "With a curious mindset and a love for problem-solving, I thrive in collaborative environments and constantly explore new technologies to stay ahead. I'm always excited to take on challenges that push me to innovate and build better products."
+                                }
                             </p>
                         </motion.div>
                         {/* Image Content */}
@@ -168,31 +178,32 @@ const fadeUp = {
                     <div className="flex flex-col gap-10 @container">
                         <div className="flex flex-col gap-4">
                             <motion.h2
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="text-4xl font-bold"
                             >
                                 WHAT I <span className="text-[#ff0000]">DO</span>
                             </motion.h2>
                             <motion.p
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="text-gray-400 text-base font-normal leading-relaxed max-w-[720px]"
                             >
-                                From front-end interfaces to back-end logic, I create seamless digital experiences.
-                                Here&apos;s a look at my main areas of expertise.
+                                {
+                                    "From front-end interfaces to back-end logic, I create seamless digital experiences.Here's a look at my main areas of expertise."
+                                }
                             </motion.p>
                         </div>
 
                         <motion.div
-                            variants={stagger}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
+                            variants={stagger}
                             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                         >
                             {skillCards.map((card, index) => (
@@ -224,19 +235,19 @@ const fadeUp = {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mb-12 text-center sm:mb-16">
                             <motion.h2
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
                             >
                                 FEATURED <span className="text-[#ff0000]">PROJECTS</span>
                             </motion.h2>
                             <motion.p
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg"
                             >
                                 A selection of my best work, showcasing my skills in the MERN stack.
@@ -244,16 +255,16 @@ const fadeUp = {
                         </div>
 
                         <motion.div
-                            variants={stagger}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
+                            variants={stagger}
                             className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10"
                         >
                             {projects.slice(0, 3).map((project, index) => (
                                 <motion.div
-                                    variants={fadeUp}
                                     key={index}
+                                    variants={fadeUp}
                                     className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 transition-all hover:-translate-y-1 hover:border-[#ff0000] hover:shadow-xl hover:shadow-[#ff0000]/10 cursor-default"
                                 >
                                     <div className="aspect-video w-full overflow-hidden">
@@ -301,26 +312,25 @@ const fadeUp = {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mb-12 text-center">
                             <motion.h2
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
                             >
                                 TECHNICAL <span className="text-[#ff0000]">SKILLS</span>
                             </motion.h2>
                             <motion.p
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="mt-4 text-base text-zinc-400 sm:text-lg"
                             >
                                 The tools and technologies I use to build modern web applications.
                             </motion.p>
                         </div>
 
-                        {/* <div className=""> */}
                         <Marquee
                             autoFill
                             speed={150}
@@ -350,7 +360,6 @@ const fadeUp = {
                                 <p className="text-gray-500 text-center mx-6">No clients available</p>
                             )}
                         </Marquee>
-                        {/* </div> */}
                     </div>
                 </section>
 
@@ -362,19 +371,19 @@ const fadeUp = {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="text-center">
                             <motion.h2
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="text-3xl font-black uppercase leading-tight tracking-tighter sm:text-4xl md:text-5xl"
                             >
                                 GET IN <span className="text-[#ff0000]">TOUCH</span>
                             </motion.h2>
                             <motion.p
-                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={fadeUp}
                                 className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg"
                             >
                                 Have a project in mind or just want to say hi? Feel free to reach out.
