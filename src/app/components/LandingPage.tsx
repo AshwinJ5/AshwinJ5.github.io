@@ -8,6 +8,26 @@ import Marquee from "react-fast-marquee";
 import { personalData, skills, projects } from "../datas";
 
 const LandingPage = () => {
+    const skillCards = [
+        {
+            icon: "lan",
+            title: "Full-Stack Solutions",
+            description:
+                "Integrating databases like MongoDB and PostgreSQL to deliver complete, scalable MERN stack applications.",
+        },
+        {
+            icon: "database",
+            title: "Backend Development",
+            description:
+            "Building robust server-side applications and APIs with Node.js, Express, and ensuring secure data handling.",
+        },
+        {
+            icon: "code",
+            title: "Frontend Development",
+            description:
+                "Crafting responsive and dynamic user interfaces with React, Next.js, and modern CSS frameworks like Tailwind.",
+        },
+    ];
 
     return (
         <div className={`font-sans bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
@@ -154,6 +174,39 @@ const LandingPage = () => {
                     </div>
                 </section>
 
+                <section className="py-16 md:py-24 w-full relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" id="skills">
+                    <div className="flex flex-col gap-10 @container">
+                        <div className="flex flex-col gap-4">
+                            <h2 className="text-white tracking-tight text-3xl font-bold leading-tight sm:text-4xl md:text-5xl max-w-[720px]">
+                                WHAT I <span className="text-[#ff0000]">DO</span>
+                            </h2>
+                            <p className="text-gray-400 text-base font-normal leading-relaxed max-w-[720px]">
+                                From front-end interfaces to back-end logic, I create seamless digital experiences.
+                                Here&apos;s a look at my main areas of expertise.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {skillCards.map((card, index) => (
+                                <div
+                                    key={index}
+                                    className="flex flex-1 gap-4 rounded-xl border border-gray-800 p-6 flex-col shadow-sm transition-transform hover:-translate-y-1 hover:border-[#FF0000]/50"
+                                >
+                                    <div className="text-[#FF0000]">
+                                        <span className="material-symbols-outlined text-3xl">{card.icon}</span>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <h3 className="text-white text-lg font-bold leading-tight">{card.title}</h3>
+                                        <p className="text-gray-400 text-sm font-normal leading-normal">
+                                            {card.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Projects Section */}
                 <section className="relative w-full py-16 sm:py-20 lg:py-32" id="projects">
                     {/* Background decoration */}
@@ -170,7 +223,7 @@ const LandingPage = () => {
                         </div>
 
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-                            {projects.slice(0,3).map((project, index) => (
+                            {projects.slice(0, 3).map((project, index) => (
                                 <div
                                     key={index}
                                     className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 transition-all hover:-translate-y-1 hover:border-[#ff0000] hover:shadow-xl hover:shadow-[#ff0000]/10 cursor-default"
@@ -191,7 +244,7 @@ const LandingPage = () => {
                                         </p>
                                         <div className="flex items-center justify-between">
                                             <div className="flex flex-wrap gap-2 text-xs text-zinc-400">
-                                                {project.tech.slice(0,3).map((tag, tagIndex) => (
+                                                {project.tech.slice(0, 3).map((tag, tagIndex) => (
                                                     <span
                                                         key={tagIndex}
                                                         className="rounded-full bg-zinc-800 px-2.5 py-1 font-medium hover:bg-[#ff0000] hover:text-white transition-colors text-center"
