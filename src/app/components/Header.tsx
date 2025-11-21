@@ -49,7 +49,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/10 backdrop-blur-md supports-backdrop-filter:bg-black/50">
+        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0E1111]/10 backdrop-blur-md supports-backdrop-filter:bg-[#0E1111]/50">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                 {/* Logo - Z-index ensures it stays above overlay if needed */}
                 <Link className="relative z-50 flex items-center gap-2 transition-opacity hover:opacity-80" href="/">
@@ -144,7 +144,7 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 z-40 flex h-dvh w-full flex-col items-center justify-center bg-black/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
+                className={`fixed inset-0 z-40 flex h-dvh w-full flex-col items-center justify-center bg-[#0E1111]/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
                     isMobileMenuOpen ? "visible opacity-100 pointer-events-auto" : "invisible opacity-0 pointer-events-none"
                 }`}
                 // Prevent clicks on the overlay from bubbling up awkwardly

@@ -34,7 +34,7 @@ export default function Contact() {
 
     return (
         <div
-            className={`${spaceGrotesk.variable} font-sans bg-black text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
+            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
         >
             {/* Load Material Symbols Font */}
             <style jsx global>{`
@@ -147,7 +147,7 @@ export default function Contact() {
 
                             {/* Right Column: Form */}
                             <div className="flex items-center justify-center lg:items-start">
-                                <div className="w-full max-w-lg rounded-xl border border-gray-100/10 bg-black/50 p-6 sm:p-8 backdrop-blur-sm shadow-2xl">
+                                <div className="w-full max-w-lg rounded-xl border border-gray-100/10 bg-[#0E1111]/50 p-6 sm:p-8 backdrop-blur-sm shadow-2xl">
                                     <div className="flex flex-col space-y-6">
                                         <div className="space-y-2">
                                             <h3 className="text-3xl font-bold text-white">Send me a message</h3>
@@ -163,7 +163,7 @@ export default function Contact() {
                                                     Name
                                                 </label>
                                                 <input
-                                                    className="flex h-10 w-full rounded-md border border-[#FF0000]/50 bg-black/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all"
+                                                    className="flex h-10 w-full rounded-md border border-[#FF0000]/50 bg-[#0E1111]/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all"
                                                     id="name"
                                                     placeholder="Your Name"
                                                     type="text"
@@ -180,7 +180,7 @@ export default function Contact() {
                                                     Email
                                                 </label>
                                                 <input
-                                                    className="flex h-10 w-full rounded-md border border-[#FF0000]/50 bg-black/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all"
+                                                    className="flex h-10 w-full rounded-md border border-[#FF0000]/50 bg-[#0E1111]/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all"
                                                     id="email"
                                                     placeholder="you@example.com"
                                                     type="email"
@@ -197,7 +197,7 @@ export default function Contact() {
                                                     Message
                                                 </label>
                                                 <textarea
-                                                    className="flex min-h-20 w-full rounded-md border border-[#FF0000]/50 bg-black/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all resize-none"
+                                                    className="flex min-h-20 w-full rounded-md border border-[#FF0000]/50 bg-[#0E1111]/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF0000] focus-visible:ring-offset-2 focus-visible:ring-offset-black transition-all resize-none"
                                                     id="message"
                                                     placeholder="Your message..."
                                                     rows={5}

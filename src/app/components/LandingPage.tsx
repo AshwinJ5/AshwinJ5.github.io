@@ -36,7 +36,7 @@ const LandingPage = () => {
     ];
 
     return (
-        <div className={`font-sans bg-black text-white selection:bg-[#ff0000] selection:text-white`}>
+        <div className={`font-sans bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
             {/* Global Styles for specific elements */}
             <style jsx global>{`
                 .material-symbols-outlined {
@@ -280,7 +280,7 @@ const LandingPage = () => {
                             speed={150}
                             pauseOnHover
                             gradient={true}
-                            gradientColor="#000000"
+                            gradientColor="#0E1111"
                             gradientWidth={50}
                         >
                             {skills.length > 0 ? (

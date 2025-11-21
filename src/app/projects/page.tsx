@@ -38,7 +38,7 @@ export default function Projects() {
     };
 
     return (
-        <div className={`${spaceGrotesk.variable} font-sans bg-black text-white min-h-screen flex flex-col`}>
+        <div className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-white min-h-screen flex flex-col`}>
             {/* External Styles for Icons */}
 
             <style jsx global>{`

@@ -16,10 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 export default function AboutMe() {
     return (
         <div
-            className={`${spaceGrotesk.variable} font-sans bg-black text-slate-200 selection:bg-[#ff0000] selection:text-white`}
+            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}
         >
-
-
             <style jsx global>{`
                 .material-symbols-outlined {
                     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -103,7 +101,7 @@ export default function AboutMe() {
                                         {experiences.map((job, index) => (
                                             <div key={index} className="relative group">
                                                 {/* Icon Circle */}
-                                                <div className="absolute -left-10 top-0 flex size-9 items-center justify-center rounded-full border border-[#ff0000] bg-black shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
+                                                <div className="absolute -left-10 top-0 flex size-9 items-center justify-center rounded-full border border-[#ff0000] bg-[#0E1111] shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
                                                     <span className="material-symbols-outlined text-[#ff0000] text-lg">
                                                         apartment
                                                     </span>
@@ -130,7 +128,7 @@ export default function AboutMe() {
                                 </h2>
                                 {education.map((item, index) => (
                                     <div key={index} className="flex items-start gap-6 group">
-                                        <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-[#ff0000] bg-black shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
+                                        <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-[#ff0000] bg-[#0E1111] shadow-md shadow-[#ff0000]/10 group-hover:shadow-[#ff0000]/40 transition-shadow">
                                             <span className="material-symbols-outlined text-[#ff0000] text-lg">
                                                 {item.label}
                                             </span>

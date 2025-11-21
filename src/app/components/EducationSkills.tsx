@@ -11,7 +11,7 @@ const skillColumns = [skillsWithPercentage.slice(0, mid), skillsWithPercentage.s
 
 export default function EducationSkills() {
     return (
-        <div className={`font-sans min-h-screen bg-black text-white selection:bg-[#ff0000] selection:text-white`}>
+        <div className={`font-sans min-h-screen bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
             {/* Inline styles for Material Symbols */}
             <style jsx global>{`
                 .material-symbols-outlined {
@@ -51,9 +51,10 @@ export default function EducationSkills() {
                                     Education & <span className="text-[#ff0000]">Skills</span>
                                 </h1>
                                 <p className="text-gray-400 max-w-2xl text-lg sm:text-xl leading-relaxed">
-                                    
-                                        My academic path started with a foundation in Mechanical Engineering, which shaped my analytical and problem-solving mindset. Later, I transitioned into modern software development through structured full-stack training, equipping me with practical expertise in building scalable digital solutions.
-                                    
+                                    My academic path started with a foundation in Mechanical Engineering, which shaped my
+                                    analytical and problem-solving mindset. Later, I transitioned into modern software
+                                    development through structured full-stack training, equipping me with practical
+                                    expertise in building scalable digital solutions.
                                 </p>
                             </div>
 
