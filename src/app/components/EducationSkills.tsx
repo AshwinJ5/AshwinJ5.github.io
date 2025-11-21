@@ -94,7 +94,7 @@ export default function EducationSkills() {
                                 transition={{ duration: 0.6 }}
                                 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 border-l-4 border-[#ff0000] pl-4"
                             >
-                                Technical Skills
+                                Technical <span className="text-[#ff0000]">Skills</span>
                             </motion.h2>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">

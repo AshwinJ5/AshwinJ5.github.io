@@ -59,7 +59,7 @@ export default function Contact() {
                             >
                                 <div className="space-y-4">
                                     <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-tight">
-                                        Let&apos;s Connect
+                                        Let&apos;s <span className="text-[#ff0000]">Connect</span>
                                     </h1>
                                     <p className="text-gray-400 text-lg max-w-md">
                                         Feel free to reach out for collaborations, job opportunities, or just to say hello!
