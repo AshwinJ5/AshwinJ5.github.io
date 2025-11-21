@@ -226,7 +226,8 @@ const LandingPage = () => {
                                             </div>
                                             <Link
                                                 className="text-sm font-bold text-[#ff0000] hover:underline"
-                                                href={project.link} target="_blank"
+                                                href={project.link}
+                                                target="_blank"
                                             >
                                                 Demo →
                                             </Link>
@@ -283,16 +284,18 @@ const LandingPage = () => {
                             {skills.length > 0 ? (
                                 skills.map((images, index) => (
                                     <div
-                                        key={index}
                                         className="w-15 bg-[#ffffff7f] hover:bg-[#ff0000] rounded sm:w-24 md:w-24 lg:w-24  h-15 sm:h-20 md:h-20 lg:h-20 sm:mx-3 md:mx-[18px] lg:mx-[21px] xl:mx-[25px] mx-[7.5px]"
+                                        key={index}
                                     >
-                                        <Image
-                                            width={200}
-                                            height={200}
-                                            className=" h-full  mx-auto"
-                                            src={images.image_url}
-                                            alt={`Client ${index + 1}`}
-                                        />
+                                        <Link href={images.url || "#"} target="_blank">
+                                            <Image
+                                                width={200}
+                                                height={200}
+                                                className=" h-full  mx-auto"
+                                                src={images.image_url}
+                                                alt={`Client ${index + 1}`}
+                                            />
+                                        </Link>
                                     </div>
                                 ))
                             ) : (
