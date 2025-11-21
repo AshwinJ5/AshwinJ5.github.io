@@ -46,13 +46,13 @@ export default function Contact() {
                 }
             `}</style>
 
+                <Header />
             <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
                 {/* Background Glows */}
                 <div className="absolute top-0 -left-48 h-160 w-160 bg-red-900/40 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
                 <div className="absolute bottom-0 -right-48 h-160 w-160 bg-red-900/30 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
 
                 {/* Header */}
-                <Header />
 
                 <main className="flex-1 z-10">
                     <div className="container mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24 lg:py-32">

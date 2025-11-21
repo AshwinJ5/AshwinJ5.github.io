@@ -22,6 +22,7 @@ export default function EducationSkills() {
                 }
             `}</style>
 
+                    <Header />
             {/* Main Container with strict overflow handling */}
             <div className="relative min-h-screen w-full overflow-x-hidden font-display">
                 {/* Background Glow Effects Wrapper */}
@@ -40,7 +41,6 @@ export default function EducationSkills() {
 
                 <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* Self-contained Header (Handles its own Mobile Menu) */}
-                    <Header />
 
                     {/* Main Content */}
                     <main className="py-16 sm:py-24">

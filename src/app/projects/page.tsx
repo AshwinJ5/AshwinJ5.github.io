@@ -50,11 +50,11 @@ export default function Projects() {
                 }
             `}</style>
 
+                        <Header />
             <div className="relative flex h-full grow flex-col font-display overflow-x-hidden">
                 <div className="flex-1 flex flex-col items-center py-5 px-4 sm:px-10 md:px-20 lg:px-40">
                     <div className="flex flex-col max-w-[1200px] w-full flex-1">
                         {/* Header */}
-                        <Header />
 
                         <main className="flex flex-col gap-8 mt-8 md:mt-12">
                             {/* Hero Text */}
