@@ -1,25 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Space_Grotesk } from "next/font/google";
-
-// Initialize font
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
-});
 
 export default function NotFound() {
   return (
-    <div className={`${spaceGrotesk.variable} font-sans  w-full flex flex-col bg-black text-gray-200 selection:bg-[#ff0000] selection:text-white  h-dvh`}>
-      <style jsx global>{`
-        .font-display {
-          font-family: var(--font-space-grotesk), sans-serif;
-        }
-      `}</style>
-
-
+    <div className={`w-full flex flex-col bg-black text-gray-200 selection:bg-[#ff0000] selection:text-white  h-dvh`}>
       {/* Main Content */}
       <main className="flex flex-1 items-center justify-center p-4 font-display">
         <div className="flex flex-col items-center gap-6 text-center">
@@ -42,7 +27,7 @@ export default function NotFound() {
           {/* CTA Button */}
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
             <Link
-              className="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-8 bg-[#ff0000] text-white text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,0,0,0.4)]"
+              className="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-8 bg-[#ff0000] text-white text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,0,0.4)] hover:bg-white hover:text-[#ff0000] active:scale-95"
               href="/"
             >
               <span className="truncate">Go Back Home</span>

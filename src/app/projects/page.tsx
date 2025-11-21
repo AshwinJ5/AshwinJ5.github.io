@@ -157,7 +157,8 @@ export default function Projects() {
                                                 {/* Buttons */}
                                                 <div className="flex gap-3 mt-auto pt-4">
                                                     <Link
-                                                        href={project.demoLink} target="_blank"
+                                                        href={project.demoLink}
+                                                        target="_blank"
                                                         className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-[#ff0000] text-white text-sm font-bold gap-2 hover:bg-white hover:text-[#ff0000] transition-colors"
                                                     >
                                                         <span className="material-symbols-outlined text-lg">
@@ -166,7 +167,8 @@ export default function Projects() {
                                                         Live Demo
                                                     </Link>
                                                     <Link
-                                                        href={project.codeLink} target="_blank"
+                                                        href={project.codeLink}
+                                                        target="_blank"
                                                         className="flex-1 flex items-center justify-center h-10 px-4 rounded-lg bg-zinc-800 text-white text-sm font-bold gap-2 hover:bg-zinc-700 transition-colors border border-zinc-700"
                                                     >
                                                         <span className="material-symbols-outlined text-lg">code</span>
@@ -211,7 +213,8 @@ export default function Projects() {
                                             applications. Check out my GitHub profile for a complete list.
                                         </p>
                                         <Link
-                                            href={`${personalData?.socialMedia?.github}?tab=repositories` || "#"} target="_blank"
+                                            href={`${personalData?.socialMedia?.github}?tab=repositories` || "#"}
+                                            target="_blank"
                                             className="mt-4 flex h-12 items-center justify-center rounded-lg bg-[#ff0000] px-8 text-base font-bold text-white shadow-lg shadow-[#ff0000]/20 transition-all hover:bg-red-700 hover:shadow-xl hover:-translate-y-0.5"
                                         >
                                             <span className="material-symbols-outlined mr-2">arrow_forward</span>
