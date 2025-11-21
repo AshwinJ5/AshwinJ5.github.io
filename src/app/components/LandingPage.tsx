@@ -31,8 +31,8 @@ const LandingPage = () => {
                     <div className="absolute inset-0 z-0 w-full h-full ">
                         <Particles
                             particleColors={["#ff0000", "#ff0000"]}
-                            particleCount={1000}
-                            particleSpread={20}
+                            particleCount={7500}
+                            particleSpread={25}
                             speed={0.5}
                             particleBaseSize={100}
                             moveParticlesOnHover={true}
