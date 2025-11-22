@@ -1,16 +1,16 @@
 [
     {
         "title": "BABAS E-commerce Platform",
-        "description": "A full-stack online store with product listings, cart, and checkout functionalities.",
+        "description": "Full-featured e-commerce platform with product catalog, shopping cart, secure checkout, and integrated payment processing",        
         "image_url": "/babas.png",
         "type": "Professional",
-        "tech": ["Express.js", "Node.js", "MongpDB", "Next.js", "Tailwind CSS", "Razorpay", "TypeScript"],
+        "tech": ["Express.js", "Node.js", "MongoDB", "Next.js", "Tailwind CSS", "Razorpay", "TypeScript"],
         "demoLink": "https://www.babascamera.com",
         "codeLink": ""
     },
     {
         "title": "RentORent Camera Rental Platform",
-        "description": "A collaborative tool to organize tasks, set deadlines, and track progress with Next.js.",
+        "description": "Camera rental marketplace allowing photographers to rent out their equipment or borrow from others easily",        
         "image_url": "/rentorent.jpg",
         "type": "Professional",
         "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB", "Node.js"],
@@ -19,7 +19,7 @@
     },
     {
         "title": "Digital NFC Portfolio & Visiting Card System",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Smart digital business card system using NFC technology for instant professional profile sharing and networking",        
         "image_url": "/cards.png",
         "type": "Professional",
         "tech": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
@@ -28,7 +28,7 @@
     },
     {
         "title": "Taskly Todo App System",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Comprehensive task management application for organizing, tracking, and managing daily activities and projects efficiently",        
         "image_url": "/taskly.jpg",
         "type": "Personal",
         "tech": ["Next.js", "Nest.js", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js"],
@@ -37,7 +37,7 @@
     },
     {
         "title": "Company Website of Trackpi Pvt Ltd",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Corporate website and digital platform showcasing IoT solutions and technology services for businesses",        
         "image_url": "/trackpi.png",
         "type": "Professional",
         "tech": ["React", "Tailwind CSS", "MongoDB", "Node.js", "Express.js"],
@@ -46,7 +46,7 @@
     },
     {
         "title": "Porto Blog App",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Modern blogging platform for creating, publishing, and sharing articles with a clean user interface",        
         "image_url": "/porto.jpg",
         "type": "Personal",
         "tech": ["React", "Express.js", "Javascript", "Bootstrap", "MongoDB", "Node.js"],
@@ -55,7 +55,7 @@
     },
     {
         "title": "BookMySeat App",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Movie and seat booking system with secure payment integration for various occasions",        
         "image_url": "/bookmyseat.jpg",
         "type": "Personal",
         "tech": ["React", "Express.js", "Javascript", "Bootstrap", "MongoDB", "Razorpay", "Node.js"],
@@ -64,7 +64,7 @@
     },
     {
         "title": "Yummi Food booking App",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Food ordering platform featuring restaurant menus, and seamless user experience",
         "image_url": "/yummi.jpg",
         "type": "Personal",
         "tech": ["React", "Express.js", "Bootstrap", "MongoDB", "Node.js"],
@@ -73,7 +73,7 @@
     },
     {
         "title": "Quiz App",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Interactive quiz application, real-time scoring, and engaging user interface",        
         "image_url": "/quiz.png",
         "type": "Personal",
         "tech": ["React", "Bootstrap", "HTML", "CSS", "Javascript"],
@@ -82,7 +82,7 @@
     },
     {
         "title": "Card Flip Game",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Memory challenge game where players flip cards to find matching pairs with time  tracking",       
         "image_url": "/flip.png",
         "type": "Personal",
         "tech": ["React", "HTML", "CSS", "Javascript"],
@@ -91,7 +91,7 @@
     },
     {
         "title": "Media Player",
-        "description": "A web app displaying current weather and forecasts using a third-party API.",
+        "description": "Feature-rich web media player that allows users to manage and organize their YouTube music and video collections",    
         "image_url": "/media.png",
         "type": "Personal",
         "tech": ["React", "Bootstrap", "HTML", "CSS", "Javascript"],

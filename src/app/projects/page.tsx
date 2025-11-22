@@ -214,7 +214,7 @@ export default function Projects() {
                                                 </span>
                                             </div>
 
-                                            <p className="text-zinc-400 text-sm leading-relaxed">
+                                            <p className="text-zinc-400 text-sm leading-relaxed line-clamp-3">
                                                 {project.description}
                                             </p>
 

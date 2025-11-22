@@ -272,13 +272,13 @@ const LandingPage = () => {
                                             width={300}
                                             height={300}
                                             alt={project.title}
-                                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                                             src={project.image_url}
                                         />
                                     </div>
                                     <div className="flex flex-1 flex-col p-6">
                                         <h3 className="mb-2 text-xl font-bold text-white">{project.title}</h3>
-                                        <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">
+                                        <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400 line-clamp-3">
                                             {project.description}
                                         </p>
                                         <div className="flex items-center justify-between">
