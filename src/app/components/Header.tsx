@@ -49,7 +49,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0E1111]/10 backdrop-blur-md supports-backdrop-filter:bg-[#0E1111]/50">
+        <header className="font-display sticky top-0 z-50 w-full border-b border-white/10 bg-[#0E1111]/10 backdrop-blur-md supports-backdrop-filter:bg-[#0E1111]/50">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
                 {/* Logo - Z-index ensures it stays above overlay if needed */}
                 <Link className="relative z-50 flex items-center gap-2 transition-opacity hover:opacity-80" href="/">
