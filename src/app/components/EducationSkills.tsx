@@ -12,16 +12,9 @@ const skillColumns = [skillsWithPercentage.slice(0, mid), skillsWithPercentage.s
 
 export default function EducationSkills() {
     return (
-        <div className={`font-sans min-h-screen bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
-            <style jsx global>{`
-                .material-symbols-outlined {
-                    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-                }
-                .font-display {
-                    font-family: var(--font-space-grotesk), sans-serif;
-                }
-            `}</style>
-
+        <div
+            className={`font-display min-h-screen bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}
+        >
             <Header />
 
             <div className="relative min-h-screen w-full overflow-x-hidden font-display">

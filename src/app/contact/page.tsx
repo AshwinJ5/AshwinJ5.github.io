@@ -1,19 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { Space_Grotesk } from "next/font/google";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { personalData } from "../datas";
 import Container from "../components/Container";
 import { motion } from "framer-motion";
-
-const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-    variable: "--font-space-grotesk",
-});
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -31,17 +24,8 @@ export default function Contact() {
 
     return (
         <div
-            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
+            className={`font-display bg-[#0E1111] text-gray-50 min-h-screen flex flex-col selection:bg-[#FF0000] selection:text-white`}
         >
-            <style jsx global>{`
-                .material-symbols-outlined {
-                    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-                }
-                .font-display {
-                    font-family: var(--font-space-grotesk), sans-serif;
-                }
-            `}</style>
-
             <Header />
 
             <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
@@ -147,7 +131,7 @@ export default function Contact() {
                                                         rows={5}
                                                         value={formData.message}
                                                         onChange={handleInputChange}
-                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-zinc-950/50 px-3 py-2 text-sm resize-none focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
+                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-transparent px-3 py-2 text-sm resize-none focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
                                                         required
                                                     />
                                                 ) : (
@@ -156,7 +140,7 @@ export default function Contact() {
                                                         type={field === "email" ? "email" : "text"}
                                                         value={formData[field as "name" | "email"]}
                                                         onChange={handleInputChange}
-                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-zinc-950/50 px-3 py-2 text-sm focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
+                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-transparent px-3 py-2 text-sm focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
                                                         required
                                                     />
                                                 )}

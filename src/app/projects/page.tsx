@@ -1,19 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { projects, personalData } from "../datas";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Initialize font
-const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-    variable: "--font-space-grotesk",
-});
 
 // Filter Categories
 const categories = ["All", "Professional", "Personal"];
@@ -22,25 +15,25 @@ const techTags = ["MongoDB", "Next.js", "TypeScript", "Nest.js", "React", "Tailw
 // Fixed Variants with proper TypeScript types
 const headerVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { 
-            duration: 0.5, 
-            ease: "easeOut" as const 
-        } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut" as const,
+        },
     },
 };
 
 const filterBarVariants = {
     hidden: { opacity: 0, y: 12 },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { 
-            duration: 0.4, 
-            ease: "easeOut" as const 
-        } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.4,
+            ease: "easeOut" as const,
+        },
     },
 };
 
@@ -54,21 +47,21 @@ const gridVariants = {
 
 const cardVariants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { 
-        opacity: 1, 
-        scale: 1, 
-        transition: { 
-            duration: 0.25, 
-            ease: "easeOut" as const 
-        } 
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.25,
+            ease: "easeOut" as const,
+        },
     },
-    exit: { 
-        opacity: 0, 
-        scale: 0.9, 
-        transition: { 
-            duration: 0.2, 
-            ease: "easeIn" as const 
-        } 
+    exit: {
+        opacity: 0,
+        scale: 0.9,
+        transition: {
+            duration: 0.2,
+            ease: "easeIn" as const,
+        },
     },
 };
 
@@ -89,17 +82,8 @@ export default function Projects() {
 
     return (
         <div
-            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-white min-h-screen flex flex-col selection:bg-[#ff0000] selection:text-white`}
+            className={` bg-[#0E1111] text-white min-h-screen flex flex-col selection:bg-[#ff0000] selection:text-white`}
         >
-            <style jsx global>{`
-                .material-symbols-outlined {
-                    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-                }
-                .font-display {
-                    font-family: var(--font-space-grotesk), sans-serif;
-                }
-            `}</style>
-
             <Header />
 
             <div className="flex-1 w-full font-display">
@@ -296,12 +280,12 @@ export default function Projects() {
                         transition={{ duration: 0.45, ease: "easeOut" as const }}
                         className="mt-16 mb-12 rounded-xl bg-zinc-900 p-8 md:p-12 border border-zinc-800 text-center relative overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,0,0,0.18),transparent_55%)] opacity-60 pointer-events-none" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.18),transparent_55%)] opacity-60 pointer-events-none" />
                         <div className="relative z-10">
                             <h3 className="text-2xl md:text-3xl font-bold text-white">Want to see more?</h3>
                             <p className="text-zinc-300 mt-2 max-w-md mx-auto">
-                                I&apos;ve built more experiments and side projects. Check out my GitHub repositories for
-                                the full list.
+                                I&apos;ve built more experiments and side projects. Check out my GitHub repositories for the
+                                full list.
                             </p>
                             <motion.div whileHover={{ y: -2 }} className="inline-flex mt-6">
                                 <Link

@@ -53,16 +53,7 @@ const LandingPage = () => {
     ];
 
     return (
-        <div className={`font-sans bg-[#0E1111] text-white selection:bg-[#ff0000] selection:text-white`}>
-            {/* Global Styles for specific elements */}
-            <style jsx global>{`
-                .material-symbols-outlined {
-                    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-                }
-                .font-display {
-                    font-family: var(--font-space-grotesk), sans-serif;
-                }
-            `}</style>
+        <div className={`bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}>
 
             <Header />
             <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden font-display">
@@ -91,7 +82,7 @@ const LandingPage = () => {
                         />
                     </div>
                     {/* Main Content */}
-                    <div className="relative z-10 container grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2 pointer-events-none">
+                    <div className="relative z-10 container grid max-w-7xl grid-cols-1 px-4 sm:px-6 items-center gap-12 lg:grid-cols-2 pointer-events-none">
                         <motion.div variants={stagger} className="text-center lg:text-left">
                             <motion.h1
                                 variants={fadeUp}
@@ -107,11 +98,14 @@ const LandingPage = () => {
                                 }
                             </motion.p>
 
-                            <motion.div variants={fadeUp} className="mt-8 flex gap-4 pointer-events-auto">
+                            <motion.div
+                                variants={fadeUp}
+                                className="mt-8 flex gap-4 pointer-events-auto justify-center lg:justify-start"
+                            >
                                 <div>
                                     <Link
                                         href="/projects"
-                                        className="flex h-12 items-center justify-center rounded-full bg-[#ff0000] px-4 font-bold hover:bg-white hover:text-[#ff0000]"
+                                        className="flex h-12 items-center justify-center rounded-full bg-[#ff0000] px-4 font-bold hover:bg-white hover:text-[#ff0000] text-sm transition-all sm:text-lg"
                                     >
                                         Explore Projects
                                     </Link>

@@ -1,19 +1,11 @@
 "use client";
 
-import { Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { experiences, skills, education, personalData } from "../datas";
 import Container from "../components/Container";
-import { motion } from "framer-motion"; // ⬅️ Add this
-
-// Font
-const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-    variable: "--font-space-grotesk",
-});
+import { motion } from "framer-motion";
 
 // Animation variants
 const fadeUp = {
@@ -28,18 +20,8 @@ const staggerContainer = {
 
 export default function AboutMe() {
     return (
-        <div
-            className={`${spaceGrotesk.variable} font-sans bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}
-        >
-            {/* Global Styles */}
-            <style jsx global>{`
-                .material-symbols-outlined {
-                    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-                }
-            `}</style>
-
+        <div className={`font-display bg-[#0E1111] text-slate-200 selection:bg-[#ff0000] selection:text-white`}>
             <Header />
-
             <Container>
                 <main className="py-10 sm:py-16 flex flex-col gap-24">
                     {/* Hero Section */}
