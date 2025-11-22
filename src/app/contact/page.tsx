@@ -127,7 +127,7 @@ export default function Contact() {
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                                 className="flex items-center justify-center lg:items-start"
                             >
-                                <div className="w-full max-w-lg rounded-xl border border-gray-100/10 bg-black/50 p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
+                                <div className="w-full max-w-lg rounded-xl border border-gray-100/10 bg-zinc-950/50 p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
                                     <form onSubmit={handleSubmit} className="space-y-4">
                                         <h3 className="text-3xl font-bold mb-2">Send me a message</h3>
 
@@ -147,7 +147,7 @@ export default function Contact() {
                                                         rows={5}
                                                         value={formData.message}
                                                         onChange={handleInputChange}
-                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-black/50 px-3 py-2 text-sm resize-none focus:ring-2 focus:ring-[#FF0000]"
+                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-zinc-950/50 px-3 py-2 text-sm resize-none focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
                                                         required
                                                     />
                                                 ) : (
@@ -156,7 +156,7 @@ export default function Contact() {
                                                         type={field === "email" ? "email" : "text"}
                                                         value={formData[field as "name" | "email"]}
                                                         onChange={handleInputChange}
-                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-black/50 px-3 py-2 text-sm focus:ring-2 focus:ring-[#FF0000]"
+                                                        className="w-full rounded-md border border-[#FF0000]/50 bg-zinc-950/50 px-3 py-2 text-sm focus:ring-2 focus:ring-[#FF0000]/60 focus:outline-none"
                                                         required
                                                     />
                                                 )}

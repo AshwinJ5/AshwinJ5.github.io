@@ -397,7 +397,7 @@ const LandingPage = () => {
                                         Name
                                     </label>
                                     <input
-                                        className="block w-full rounded-lg border-zinc-700 bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#ff0000] sm:text-sm"
+                                        className="block w-full rounded-lg border-[#FF0000]/50 border bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#FF0000]/60 focus:outline-none sm:text-sm"
                                         id="name"
                                         name="name"
                                         placeholder="Your Name"
@@ -409,7 +409,7 @@ const LandingPage = () => {
                                         Email
                                     </label>
                                     <input
-                                        className="block w-full rounded-lg border-zinc-700 bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#ff0000] sm:text-sm"
+                                        className="block w-full rounded-lg border-[#FF0000]/50 border bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#ff0000]/60 focus:outline-none sm:text-sm"
                                         id="email"
                                         name="email"
                                         placeholder="your@email.com"
@@ -421,7 +421,7 @@ const LandingPage = () => {
                                         Message
                                     </label>
                                     <textarea
-                                        className="block w-full rounded-lg border-zinc-700 bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#ff0000] sm:text-sm resize-none"
+                                        className="block w-full rounded-lg border-[#FF0000]/50 border bg-zinc-900/80 px-4 py-3 text-white placeholder-zinc-500 shadow-sm backdrop-blur-sm focus:border-[#ff0000] focus:ring-1 focus:ring-[#ff0000]/60 focus:outline-none sm:text-sm resize-none"
                                         id="message"
                                         name="message"
                                         placeholder="Your message..."
