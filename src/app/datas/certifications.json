@@ -1,0 +1,45 @@
+[
+    {
+      "title": "MERN | MEAN Stack Development",
+      "issuer": "Luminar Technolab",
+      "date": "July 2023",
+      "image": "/luminar.png",
+      "certificate_url": ""
+    },
+    {
+      "title": "MERN | MEAN Stack Development",
+      "issuer": "NACTET",
+      "date": "July 2023",
+      "image": "/nactet.png",
+      "certificate_url": ""
+    },
+    {
+     "title": "Build an E-Commerce platform using React",
+     "issuer": "Scaler",
+     "date": "Nov 2025",
+     "image": "/scaler01.png",
+     "certificate_url": "https://moonshot.scaler.com/s/sl/KtgrJcYZ6i"
+   },
+    {
+      "title": "AI Tools Mastery Workshop",
+      "issuer": "Clapingo",
+      "date": "Nov 2025",
+      "image": "/clapingo01.png",
+      "certificate_url": ""
+    },
+    {
+      "title": "Why System Design Matters for Every Software Developer?",
+      "issuer": "GUVI | HCL",
+      "date": "Nov 2025",
+      "image": "/guvi01.png",
+      "certificate_url": "https://www.guvi.in/share-certificate/45qZ586o1Sajt7d822"
+    },
+    {
+      "title": "Master Generative AI",
+      "issuer": "GUVI | HCL",
+      "date": "Nov 2025",
+      "image": "/guvi02.png",
+      "certificate_url": "https://www.guvi.in/share-certificate/7s1I63v644319635PJ"
+    }
+ 
+]

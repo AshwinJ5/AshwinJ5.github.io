@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"; // ← ADD
+import Certificate from "./Certificate";
 
 const skillsWithPercentage = skills.filter((skill) => typeof skill.percentage === "number");
 const mid = Math.ceil(skillsWithPercentage.length / 2);
@@ -108,6 +109,7 @@ export default function EducationSkills() {
                                 ))}
                             </div>
                         </section>
+                        <Certificate/>
                     </main>
                 </div>
             </div>
