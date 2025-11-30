@@ -46,7 +46,6 @@ const Certificate = () => {
                     <motion.div key={index} variants={cardVariants} whileHover={{ y: -4 }} className="h-full">
                         <Link
                             href={cert.certificate_url || "#"}
-                            target="_blank"
                             className="group flex flex-col h-full rounded-xl border border-[#222222] bg-zinc-950/50 overflow-hidden transition-all duration-300 hover:border-[#ff0000]/50 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)]"
                         >
                             <div className="relative w-full h-48 bg-white overflow-hidden">
