@@ -14,6 +14,13 @@
       "certificate_url": ""
     },
     {
+     "title": "Fundamentals of Docker & Kubernetes",
+     "issuer": "Scaler",
+     "date": "Dec 2025",
+     "image": "/scaler02.png",
+     "certificate_url": "https://moonshot.scaler.com/s/sl/zz8ebJQPu4"
+   },
+    {
      "title": "Build an E-Commerce platform using React",
      "issuer": "Scaler",
      "date": "Nov 2025",
