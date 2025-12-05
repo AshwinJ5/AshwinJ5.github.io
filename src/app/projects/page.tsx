@@ -199,7 +199,7 @@ export default function Projects() {
                                         {/* Thumbnail */}
                                         <div className="relative w-full aspect-4/3 overflow-hidden">
                                             <div
-                                                className="w-full h-full bg-center bg-cover bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                                                className="w-full h-full bg-top bg-cover bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                                                 style={{ backgroundImage: `url("${project.image_url}")` }}
                                                 role="img"
                                                 aria-label={`Screenshot of ${project.title}`}
