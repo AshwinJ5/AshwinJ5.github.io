@@ -25,5 +25,7 @@
   { "name": "Github", "image_url": "/github.svg", "url": "https://github.com/" },
   { "name": "Firebase", "image_url": "/firebase.svg", "url": "https://firebase.google.com/" },
   { "name": "Supabase", "image_url": "/supabase.svg", "url": "https://supabase.com/" },
+  { "name": "Vercel", "image_url": "/vercel.svg", "url": "https://vercel.com/" },
+  { "name": "Railway", "image_url": "/railway.png", "url": "https://railway.app/" },
   { "name": "Angular", "image_url": "/angular.svg", "url": "https://angular.io/" }
 ]
