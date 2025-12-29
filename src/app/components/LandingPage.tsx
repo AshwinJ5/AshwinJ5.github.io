@@ -327,7 +327,7 @@ const LandingPage = () => {
 
                         <Marquee
                             autoFill
-                            speed={150}
+                            speed={100}
                             pauseOnHover
                             gradient={true}
                             gradientColor="#0E1111"

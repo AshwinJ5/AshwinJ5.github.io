@@ -23,6 +23,7 @@
   { "name": "Material UI", "image_url": "/material.svg", "url": "https://mui.com/" },
   { "name": "Git", "image_url": "/git.svg", "url": "https://git-scm.com/", "percentage":85 },
   { "name": "Github", "image_url": "/github.svg", "url": "https://github.com/" },
+  { "name": "Vitest", "image_url": "/vitest.svg", "url": "https://vitest.dev/" },
   { "name": "Firebase", "image_url": "/firebase.svg", "url": "https://firebase.google.com/" },
   { "name": "Supabase", "image_url": "/supabase.svg", "url": "https://supabase.com/" },
   { "name": "Angular", "image_url": "/angular.svg", "url": "https://angular.io/" }
