@@ -13,9 +13,7 @@ export const metadata: Metadata = {
     description:
         "Ashwin Joseph — MERN Stack Developer with expertise in React, Node.js, Express.js, MongoDB, and PostgreSQL, building modern, scalable web applications.",
     icons: {
-        icon: [{ url: "/favicon.ico" }, { url: "/logo.png", sizes: "32x32", type: "image/png" }],
-        apple: [{ url: "/logo.png", sizes: "180x180", type: "image/png" }],
-        shortcut: ["/favicon.ico"],
+        icon: "/logo.png",
     },
 };
 

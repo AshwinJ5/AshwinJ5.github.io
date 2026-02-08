@@ -25,6 +25,7 @@
   { "name": "Shadcn UI", "image_url": "/shadcn.svg", "url": "https://ui.shadcn.com/" },
   { "name": "Material UI", "image_url": "/material.svg", "url": "https://mui.com/" },
   { "name": "Git", "image_url": "/git.svg", "url": "https://git-scm.com/", "percentage":85 },
+  { "name": "Gitlab", "image_url": "/gitlab.svg", "url": "https://about.gitlab.com/" },
   { "name": "Github", "image_url": "/github.svg", "url": "https://github.com/" },
   { "name": "Vitest", "image_url": "/vitest.svg", "url": "https://vitest.dev/" },
   { "name": "Firebase", "image_url": "/firebase.svg", "url": "https://firebase.google.com/" },
