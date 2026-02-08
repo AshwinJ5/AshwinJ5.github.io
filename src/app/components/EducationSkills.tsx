@@ -134,7 +134,7 @@ function SkillBar({ name, percentage }: { name: string; percentage: number }) {
         <motion.div whileHover={{ scale: 1.01 }} className="space-y-2 group" ref={barRef}>
             <div className="flex justify-between font-medium">
                 <span className="group-hover:text-[#ff0000] transition-colors">{name}</span>
-                <span className="text-gray-400">{percentage}%</span>
+                {/* <span className="text-gray-400">{percentage}%</span> */}
             </div>
             <div className="w-full h-2.5 rounded-full bg-[#222222] overflow-hidden">
                 <div
