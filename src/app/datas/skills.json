@@ -17,7 +17,6 @@
   { "name": "Nest.js", "image_url": "/nest.svg", "url": "https://nestjs.com/", "percentage":65 },
   { "name": "Redis", "image_url": "/redis.svg", "url": "https://redis.io/"},
   { "name": "npm", "image_url": "/npm.svg", "url": "https://www.npmjs.com/"},
-  { "name": "VS Code", "image_url": "/vs.svg", "url": "https://code.visualstudio.com/"},
   { "name": "HTML", "image_url": "/html.svg", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
   { "name": "CSS", "image_url": "/css.svg", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   { "name": "Tailwind", "image_url": "/tailwind.svg", "url": "https://tailwindcss.com/", "percentage":85 },
