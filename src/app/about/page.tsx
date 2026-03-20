@@ -6,6 +6,7 @@ import Link from "next/link";
 import { experiences, skills, education, personalData } from "../datas";
 import Container from "../components/Container";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Animation variants
 const fadeUp = {
@@ -32,13 +33,16 @@ export default function AboutMe() {
                         className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-12"
                     >
                         <motion.div
-                            className="h-40 w-40 shrink-0 rounded-full border-4 border-[#ff0000] bg-cover bg-center shadow-xl shadow-[#ff0000]/20"
-                            style={{
-                                backgroundImage: personalData?.profileImageUrl
-                                    ? `url(${personalData.profileImageUrl})`
-                                    : 'url("/ashwin.jpg")',
-                            }}
-                        ></motion.div>
+                            className="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border-4 border-[#ff0000] shadow-xl shadow-[#ff0000]/20"
+                        >
+                            <Image
+                                src={personalData?.profileImageUrl || "/ashwin.jpg"}
+                                alt={personalData?.name || "Profile Image"}
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </motion.div>
 
                         <motion.div variants={fadeUp} className="flex flex-col gap-4 text-center md:text-left">
                             <h1 className="text-5xl font-black">

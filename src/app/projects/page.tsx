@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { projects, personalData } from "../datas";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 // Filter Categories
 const categories = ["All", "Professional", "Personal"];
@@ -198,12 +199,12 @@ export default function Projects() {
                                     >
                                         {/* Thumbnail */}
                                         <div className="relative w-full aspect-4/3 overflow-hidden">
-                                            <div
-                                                className="w-full h-full bg-top bg-cover bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                                                style={{ backgroundImage: `url("${project.image_url}")` }}
-                                                role="img"
-                                                aria-label={`Screenshot of ${project.title}`}
-                                            ></div>
+                                            <Image
+                                                src={project.image_url}
+                                                alt={`Screenshot of ${project.title}`}
+                                                fill
+                                                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                            />
                                         </div>
 
                                         {/* Content */}

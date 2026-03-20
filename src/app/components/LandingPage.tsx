@@ -158,7 +158,7 @@ const LandingPage = () => {
                             <div className="relative aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
                                 <Image
                                     width={500}
-                                    height={500}
+                                    height={800}
                                     alt="Developer portrait"
                                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                     src={personalData?.profileImageUrl || "/ashwin.jpg"}
