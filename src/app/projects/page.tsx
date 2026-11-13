@@ -10,7 +10,7 @@ import Image from "next/image";
 
 // Filter Categories
 const categories = ["All", "Professional", "Personal"];
-const techTags = ["MongoDB", "Next.js", "TypeScript", "Nest.js", "React", "Tailwind CSS"];
+const techTags = ["Postgre.SQL", "Next.js", "Node.js", "MongoDB", "React", "Tailwind CSS"];
 
 // Fixed Variants with proper TypeScript types
 const headerVariants = {

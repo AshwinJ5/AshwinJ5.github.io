@@ -1,10 +1,46 @@
 [
     {
+        "title": "Payatom Payment CRM Platform",
+        "description": "Comprehensive payment management CRM for managing merchants, agents, vendors, payouts, commissions, liquidity, and team workflows with real-time communication and support ticket management",        
+        "image_url": "/crm-payatom.png",
+        "type": "Professional",
+        "tech": ["Node.js", "Postgre.SQL", "React", "Tailwind CSS", "Express.js"],
+        "demoLink": "https://payatom.pro",
+        "codeLink": ""
+    },
+    {
+        "title": "Rawabi Tours & Travels Website",
+        "description": "Travel and tourism platform showcasing tour packages, travel services, destinations, and holiday experiences with an intuitive browsing experience",        
+        "image_url": "/rawabi.png",
+        "type": "Professional",
+        "tech": ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "Postgre.SQL", "Drizzle ORM"],
+        "demoLink": "https://rawabionline.in",
+        "codeLink": ""
+    },
+    {
+        "title": "FlowSpace – HRMS Platform",
+        "description": "Comprehensive human resource management system for managing employee records, attendance, payroll, leave, assets, contracts, compliance, and financial operations",        
+        "image_url": "/hrms.png",
+        "type": "Professional",
+        "tech": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "Postgre.SQL", "Prisma"],
+        "demoLink": "https://team.htpl.cc",
+        "codeLink": ""
+    },
+    {
+        "title": "English Vocabulary Game Admin Panel & APIs",
+        "description": "Admin management system and backend APIs for an interactive English vocabulary learning platform featuring skill-based games, levels, daily challenges, leaderboards, user progress tracking, and rewards management",        
+        "image_url": "/eng-voc-admin.png",
+        "type": "Professional",
+        "tech": ["React", "Tailwind CSS", "Node.js", "Express.js", "Postgre.SQL", "Drizzle ORM", "Firebase"],
+        "demoLink": "https://test-vocabulary.htpl.cc",
+        "codeLink": ""
+    },
+    {
         "title": "BABAS E-commerce Platform",
         "description": "Full-featured e-commerce platform with product catalog, shopping cart, secure checkout, and integrated payment processing",        
         "image_url": "/babas.png",
         "type": "Professional",
-        "tech": ["Express.js", "Node.js", "MongoDB", "Next.js", "Tailwind CSS", "Razorpay", "TypeScript"],
+        "tech": ["Node.js", "MongoDB", "Next.js", "Tailwind CSS", "Razorpay", "Express.js"],
         "demoLink": "https://www.babascamera.com",
         "codeLink": ""
     },
@@ -13,7 +49,7 @@
         "description": "Camera rental marketplace allowing photographers to rent out their equipment or borrow from others easily",        
         "image_url": "/rentorent.jpg",
         "type": "Professional",
-        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB", "Node.js"],
+        "tech": ["Next.js", "Tailwind CSS", "Express.js", "MongoDB", "Node.js"],
         "demoLink": "https://rentorent.net",
         "codeLink": ""
     },
@@ -22,7 +58,7 @@
         "description": "Smart digital business card system using NFC technology for instant professional profile sharing and networking",        
         "image_url": "/cards.png",
         "type": "Professional",
-        "tech": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
+        "tech": ["React", "Next.js", "Tailwind CSS", "Express.js", "MongoDB"],
         "demoLink": "https://www.supporttacards.com",
         "codeLink": ""
     },
@@ -31,7 +67,7 @@
         "description": "Comprehensive task management application for organizing, tracking, and managing daily activities and projects efficiently",        
         "image_url": "/taskly.jpg",
         "type": "Personal",
-        "tech": ["Next.js", "Nest.js", "TypeScript", "Tailwind CSS", "MongoDB", "Node.js"],
+        "tech": ["Next.js", "Nest.js", "Tailwind CSS", "MongoDB", "Node.js"],
         "demoLink": "https://todo-nextjs-phi-two.vercel.app",
         "codeLink": "https://github.com/AshwinJ5/todo-nestjs"
     },
