@@ -20,7 +20,7 @@
     {
         "title": "FlowSpace – HRMS Platform",
         "description": "Comprehensive human resource management system for managing employee records, attendance, payroll, leave, assets, contracts, compliance, and financial operations",        
-        "image_url": "/hrms.png",
+        "image_url": "/HRMS.png",
         "type": "Professional",
         "tech": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "Postgre.SQL", "Prisma"],
         "demoLink": "https://team.htpl.cc",
